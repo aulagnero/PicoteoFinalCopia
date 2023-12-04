@@ -1,0 +1,178 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+  /*   text-align: center; */
+    width: 100%;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  /* Estilos para el contenedor del footer */
+  .footer-container {
+    background-color: #333; /* Color de fondo del footer */
+    color: rgb(0, 0, 0); /* Color del texto en el footer */
+    text-align: center; /* Centra el contenido horizontalmente */
+    width: 100%;
+  }
+  
+  /* Estilos para cada bloque dentro del footer */
+  .footer-subscribe {
+    display: flex;          /* Utiliza flexbox para distribuir los elementos */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+    height: 200px;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    background-color: #8f8d8d;
+  }  
+  
+  .footer-subscribe .subscribe-item {
+    flex: 1;                /* Cada columna flex ocupa un espacio igual */
+    background-color: #8f8d8d; /* Color de fondo de las columnas */
+    text-align: center;     /* Centra el contenido horizontalmente */
+    margin: 15px;
+  }
+  
+  .footer-subscribe .subscribe-item .subscribe-item-img {
+    flex: 1;                /* Cada columna flex ocupa un espacio igual */
+    background-color: #c3bfbf; /* Color de fondo de las columnas */
+    text-align: center;     /* Centra el contenido horizontalmente */
+    height: 100%;
+    border-radius: 10%
+  }
+  
+  .subscribe-form {
+    display: flex;
+    width: 100%;
+    margin: 0px 15px 15px 100px;
+  }
+  .subscribe-email {
+    display: flex;          /* Utiliza flexbox para distribuir los elementos */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+    height: 50px;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    background-color: #8f8d8d;
+  }
+  .subscribe-email .subscribe-email-label {
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 30%;
+  }
+  .subscribe-email .subscribe-email-input {
+    margin-right: 15px;
+    margin-top: 20px;
+    width: 70%;
+  
+  }
+  
+  
+  .footer-info {
+    display: flex;          /* Utiliza flexbox para distribuir los elementos */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+    height: 200px;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    background-color: #6f6f6f;
+  }
+  
+  .footer-info .info-item {
+    flex: 1;                /* Cada columna flex ocupa un espacio igual */
+    background-color: #6f6f6f; /* Color de fondo de las columnas */
+    text-align: center;     /* Centra el contenido horizontalmente */
+    margin: 35px 15px 35px 35px;
+  }
+  
+  .footer-info .info-item .flexBigContainer{
+    display: flex;
+    background-color: #4b4b4b;
+    height: 70%;
+  }
+  
+  .footer-info .info-item .flexSmallContainer{
+    display: flex;
+    background-color: #6f6f6f;
+    height: 30%;
+  }
+  
+  .footer-info .info-item .flexSmallContainer .small-item {
+    flex: 1;                /* Cada columna flex ocupa un espacio igual */
+    background-color: #8f8d8d; /* Color de fondo de las columnas */
+    text-align: center;     /* Centra el contenido horizontalmente */
+    margin: 10px;
+    border-radius: 10%;
+  }
+  
+  
+  .a-footer {
+    text-decoration:wavy;
+    color: #000000;
+  }
+  
+  .li-footer {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+  }
+  /* Estilos para los encabezados h2 */
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Estilos para los párrafos p */
+  p {
+    font-size: 1rem;
+  }
+  
+  /* Estilos para la lista ul */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Estilos para los elementos de la lista li */
+  li {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los enlaces a */
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Estilos para los enlaces a en hover */
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  

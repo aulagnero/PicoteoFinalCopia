@@ -1,0 +1,118 @@
+.btn-group {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+}
+
+.card {
+    border-radius: 16px;
+    min-width: 280px;
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    row-gap: 16px;
+    flex-wrap: wrap;
+   
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+    border-radius: 0px;
+}
+
+.btn-secondary {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0px;
+    border-radius: 8px;
+background: var(--buttons-default, #007D7B);
+/* Button */
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.imagen-producto {
+    width: 100%;
+    height: auto;
+}
+
+.titulo {
+    padding: 0px;
+    color: #00403F;
+
+    font-family: Lato;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: grey;
+}
+
+.clasificacion {
+
+    unicode-bidi: normal;
+}
+
+label:hover,
+label:hover~label {
+    color: orange;
+}
+
+input[type="radio"]:checked~label {
+    color: orange;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.card-text2 {
+    color: #590856;
+
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.desc {
+    color: #02111B;
+
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.btn-group{
+
+}

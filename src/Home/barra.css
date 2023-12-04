@@ -1,0 +1,23 @@
+.botones{
+  
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   justify-content: space-evenly;
+
+}
+
+
+.productoss{
+    
+    height: 50px;
+    width: 150px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    border: none;
+    background-color: rgb(181, 181, 173);
+    border-radius: 20px;
+    font-size: 20px;
+    
+    
+}

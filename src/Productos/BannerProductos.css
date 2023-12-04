@@ -1,0 +1,58 @@
+.contenedorbanner{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin-left: 28px;
+    margin-top: 20px;
+    background-color: rgb(130, 130, 130);
+    width: 95%;
+    height: 500px;
+    border-radius: 25px;
+
+}
+
+.contenedorxx{
+    display: flex;
+    justify-content: center;
+    
+}
+.botonbanner{
+    display: flex;
+    margin-top: 350px;
+    justify-content: center;
+    margin-left: 180px;
+    
+}
+.botonbanner1{
+    background-color: aliceblue;
+    border-radius: 15px;
+    border: none;
+    width: 200px;
+    height: 60px;
+}
+
+
+.banner{
+    
+    width: 100%;
+
+}
+.texto{
+    display: flex;
+    justify-content: center;
+    
+    width: 400px;
+    height: 200px;
+    flex-direction: row;
+    margin-top: 50px ;
+    margin-left: 50px;
+    
+    
+    
+}
+.texto1{
+    text-align: left;
+    font-family: Arial;
+    font-weight: 200;
+    font-size: 50px;
+}

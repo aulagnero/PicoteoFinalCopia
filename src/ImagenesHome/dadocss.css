@@ -1,0 +1,95 @@
+* {
+    box-sizing:inherit;
+  }
+  body {
+    padding: 0;
+    fant-family: sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  [class^="cara-"] {
+    background-color: #555;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    margin: 1em;
+  }
+  
+  .cara-1 {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cara-2 {
+    justify-content: space-between;
+  }
+  
+  .cara-2 .punto:nth-child(2) {
+    align-self: flex-end;
+  }
+  
+  .cara-3 {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cara-3 .punto:nth-child(2) {
+    align-self: center;
+  }
+  
+  .cara-3 .punto:nth-child(3) {
+    align-self: flex-end;
+  }
+  
+  .cara-4 {
+    justify-content: space-between;
+  }
+  
+  .cara-4 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cara-5 {
+    justify-content: space-between;
+  }
+  
+  .cara-5 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cara-5 .medio {
+    align-self: center;
+  }
+  
+  .cara-6 {
+    justify-content: space-between;
+  }
+  
+  .cara-6 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cara-6 {
+    
+  }
+  
+  .punto {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
