@@ -1,32 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { combineReducers } from 'redux';
+import authReducer from './action/AutentificacionReducer';
 
-const initialState = {
-
-    nombreapellido: "",
-    rut: "",
-    telefono: "",
-    direccion: "",
-    referencia: "",
-};
-
-
-
-export const userSlice = createSlice({
-
-    name: "user",
-    initialState,
-    reducers: {
-        addUser: (state, action) => {
-         const {nombreapellido,rut, telefono, direccion, referencia } =  action.payload
-            state.nombreapellido = nombreapellido;
-            state.rut = rut;
-            state.telefono = telefono;
-            state.direccion = direccion;
-            state.referencia = referencia;
-
-        }
-    }
-
+const rootReducer = combineReducers({
+    auth: authReducer
+    // otros reducers van aquí
 });
-export const {addUser} = userSlice.actions;
-export default userSlice.reducer;
+
+export default rootReducer;
+
