@@ -3,7 +3,6 @@ import Barra2 from "./Barramenu";
 //import { Banner } from "./Banner";
 import "./header.css"
 import "./barra.css"
-
 // import imgcarrito from "../Home/imagenes/carritocompra.png"
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 //import imgusuario from "./imagenes/usuario.png"
@@ -28,12 +27,14 @@ function Menu() {
                     <Barra2/>
                 </div>
                 <div className="conten3">
-                
+                    <Link to="/login">
                     <img className="carrito"  src="src/Home/imagenes/Shopicon-user.svg" alt="" />
+                    
+                    </Link>
                 </div>
                 <div className="conten4">
 
-                <Link to="/login"><button><FontAwesomeIcon icon={faCartShopping}/></button></Link>
+                <Link to="/mantenedor"><button><FontAwesomeIcon icon={faCartShopping}/></button></Link>
                     
                     
                         {/* <img className="logousuario" src={imgcarro} alt="" /> */}
