@@ -62,7 +62,7 @@ const Login = () => {
             <div className="col-md-4 mx-auto mt-5">
             <div className="card">
                 <div className="card-body">
-                <h3 className="text-center mb-4">Iniciar Sesión</h3>
+                <h3 className="text-center mb-4">Iniciar Sesión en Viña Picoteo</h3>
                 {isAuthenticated ? <p>Bienvenido de nuevo!</p> : null}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
