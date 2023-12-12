@@ -1,4 +1,4 @@
-import LOGO from '../Home/Logo-viña-picoteo.svg';
+//import LOGO from '/src/Home/Logo-viña-picoteo.svg';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -86,7 +86,7 @@ const Login = () => {
                     <button type="submit" className="btn btn-primary btn-block">
                     Iniciar Sesión
                     </button>
-                    <img src={LOGO} alt="" />
+                    {/*  <img src={LOGO} alt="" />  */}
                 </form>
                 </div>
             </div>
