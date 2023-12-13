@@ -1,0 +1,77 @@
+.imagenproducto{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    transition: .3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+}
+.imagenproducto3{
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    transition: .3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+  
+
+}
+.container-fluid{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    row-gap: 50px;
+
+}
+.botoncomprar{
+   justify-content: end;
+   background-color: #dc5834; 
+}
+.titulo{
+    height: auto;
+    width: auto;
+    text-align: center;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.bordepadre{
+    border: 3px solid black;
+}
+.card-title{
+    width: 100%;
+}
+.card-text{
+    width: 100%;
+}
+.card-img-top{
+    height: 200px;
+}
+.preciocard{
+   width: 100%;
+
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 20px;
+}
+a.botoncomprar:hover {
+    text-decoration: none !important;
+}

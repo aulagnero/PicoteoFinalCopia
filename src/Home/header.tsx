@@ -19,33 +19,35 @@ function Menu() {
 
             <div className="contenedor">
                 <div className="conten1">
-                <Link to="/home"><img className='logovinapicoteo'  src={LogoPagina} alt="" /> </Link>
-                   
+                    <Link to="/home"><img className='logovinapicoteo' src={LogoPagina} alt="" /> </Link>
+
 
                 </div>
                 <div className="conten2">
-                    <Barra2/>
+                    <Barra2 />
                 </div>
+
+
                 <div className="conten3">
                     <Link to="/login">
-                    <img className="carrito"  src="src/Home/imagenes/Shopicon-user.svg" alt="" />
-                    
+                        <img className="carrito" src="src/Home/imagenes/Shopicon-user.svg" alt="" />
+
                     </Link>
                 </div>
                 <div className="conten4">
 
-                <Link to="/mantenedor"><button><FontAwesomeIcon icon={faCartShopping}/></button></Link>
-                    
-                    
-                        {/* <img className="logousuario" src={imgcarro} alt="" /> */}
+                    <Link to="/mantenedor"><button><FontAwesomeIcon icon={faCartShopping} /></button></Link>
+
+
+                    {/* <img className="logousuario" src={imgcarro} alt="" /> */}
                 </div>
-            
+
 
             </div >
             <div className="contenedorxx">
-            
-               
-               </div>
+
+
+            </div>
         </header>
 
     )
