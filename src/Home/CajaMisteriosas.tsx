@@ -16,13 +16,13 @@ function CajaMisteriosa() {
   return (
     <>
       <div className='container '>
-        <div className='row textoo'>
-          <h2>Descubre el vino o picoteo ideal para cada ocasión y presupuesto <br />
-            con nuestros filtros de búsqueda</h2>
+
+        <div className='row'>
+          <h2 className="textoo"><span >Productos individuales</span></h2>
         </div>
           <div className="row">
-            <div className="col-2 text">
-            <h3>combina el mejor vino con el picoteo perfecto</h3>
+            <div className="col-2">
+            <p className="text-lateral">combina<br />el mejor<br />vino con<br />el picoteo<br />perfecto</p>
             </div>
             <div className="row col-10 target">
               <Llamada endpoint={ENDPOINT} setData={setProductos} />

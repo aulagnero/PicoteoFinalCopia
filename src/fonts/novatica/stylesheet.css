@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Novatica';
+    src: url('Novatica-Medium.eot');
+    src: local('Novatica Medium Regular'), local('Novatica-Medium'),
+        url('Novatica-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Novatica-Medium.woff2') format('woff2'),
+        url('Novatica-Medium.woff') format('woff'),
+        url('Novatica-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Novatica';
+    src: url('Novatica.eot');
+    src: local('Novatica Regular'), local('Novatica'),
+        url('Novatica.eot?#iefix') format('embedded-opentype'),
+        url('Novatica.woff2') format('woff2'),
+        url('Novatica.woff') format('woff'),
+        url('Novatica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Novatica';
+    src: url('NovaticaLight.eot');
+    src: local('Novatica Light Regular'), local('NovaticaLight'),
+        url('NovaticaLight.eot?#iefix') format('embedded-opentype'),
+        url('NovaticaLight.woff2') format('woff2'),
+        url('NovaticaLight.woff') format('woff'),
+        url('NovaticaLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Novatica';
+    src: url('Novatica-Bold.eot');
+    src: local('Novatica Bold'), local('Novatica-Bold'),
+        url('Novatica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Novatica-Bold.woff2') format('woff2'),
+        url('Novatica-Bold.woff') format('woff'),
+        url('Novatica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
