@@ -7,27 +7,30 @@ function Barra2() {
 
     return (
 
-        <div>
-            <div className="row">
-                <div className="col-3">
+        <div className="container">
+            <div className="row columnas-menu">
+
+                <div className="col-1"></div>
+
+                <div className="col-2 item-menu">
                     <button className="productoss">
 
-                        <Link to="/productos">Cajas</Link>
+                        <Link className="a-menu" to="/productos">Cajas</Link>
 
 
                     </button>
                 </div>
-                <div className="col-3">
+                <div className="col-2 item-menu">
                     <button className="productoss">
                         Vinos
                     </button>
                 </div>
-                <div className="col-3">
+                <div className="col-2 item-menu">
                     <button className="productoss">
-                        <Link to="/suscripciones">Snacks</Link>
+                        <Link className="a-menu" to="/suscripciones">Snacks</Link>
                     </button>
                 </div>
-                <div className="col-3">
+                <div className="col-5 item-menu">
                     <button className="productoss">
                         Preguntas frecuentes
                     </button>

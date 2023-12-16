@@ -1,12 +1,12 @@
 
 
 .imagenbanner{
-    width: 100%;
-    height: auto;
-    border-radius: 23px;
-    border: 0px;
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    align-items: center;
+    border-radius: 16px;
 }
-
 
 
 

@@ -1,6 +1,19 @@
 @font-face {
-  font-family: Novatica;
-  src: url(../fonts/novatica/Novatica-Bold.woff);
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica-Medium.woff);
+  font-weight: 500;
 }
 
 .fondo {
@@ -26,7 +39,7 @@
   font-family: novatica, sans-serif;
   font-size: 28px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 36px;
   margin-bottom: 10px;
   
