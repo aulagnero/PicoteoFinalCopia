@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ProductCardBS.css';
 
+
+ export const Link = "http://localhost:3000/products"
 interface Producto {
   nombre: string;
   categoria: string;
@@ -32,8 +34,8 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
       <div className="card" style={{ width: '200px', padding: '24px' }}>
         <div>
           <div className="card-img-top">
-            {/* Utiliza la cadena base64 directamente como el origen de la imagen */}
             <img className='imagen-producto' src={producto.imagen} alt="foto producto" />
+            {/* <img className='imagen-producto' src={ Link + producto.imagen} alt="foto producto" /> */}
           </div>
 
           <div className="card-body">
