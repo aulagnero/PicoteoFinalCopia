@@ -12,9 +12,9 @@ import MainChecDatos from "./Productos/CheckOut/MaincheckoutDatos";
 import MainChecPago from "./Productos/CheckOut/MainCheckourPagar";
 import MainChecPagoExito from "./Productos/CheckOut/BodyExitoPago"
 import { FormularioUsuario } from "./Productos/CheckOut/FormularioUsuario";
-import FormIngresoProdBS from "./Mantenedor/Mantenedor";
 import { ProtectedComponent } from "./InicioSesion/ProtectedRoute";
 import LoginJWT from "./InicioSesion/Login2";
+import MainMantenedor from "./Mantenedor/mainMantenedor";
 
 
 
@@ -44,12 +44,12 @@ function Apps() {
                         <Route path="/checkoutPago" element={<MainChecPago />} />
                         <Route path="/checkoutPagoExito" element={<MainChecPagoExito />} />
                         <Route path="/FormRegistro" element={<FormularioUsuario />} />
-                        <Route path="/mantenedor" element={<FormIngresoProdBS />} />
+                        <Route path="/mantenedor" element={<MainMantenedor />} />
                         <Route path="/login" element={<LoginJWT />} />
 
                         <Route path="/protected" element={
-                            <ProtectedComponent allowedRoles={["", "admin-search", "user-search"]}>
-                                <FormIngresoProdBS />
+                            <ProtectedComponent allowedRoles={["admin", "admin-search", "user-search"]}>
+                                <MainMantenedor />
                             </ProtectedComponent>
                         } />
 

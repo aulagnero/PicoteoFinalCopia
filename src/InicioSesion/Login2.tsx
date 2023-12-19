@@ -3,17 +3,18 @@ import { useDispatch } from "react-redux";
 import { Md5 } from 'ts-md5';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import LOGO from "../Home/imagenes/logo-naciones.png"
+import LOGO from  "../Home/imagenes/logo-naciones.png"
 import { RootState } from "../Redux/store";
 import { login, logout } from "../Redux/userSlice";
 import { jwtDecode } from 'jwt-decode';
 import "./login.css"
+import { Link } from "../Home/Card2";
 
 interface LoginResponse {
     status: number;
     success: boolean;
     message: string;
-    token: string;
+    access_token: string;
 }
 
 interface TokenClaims {
@@ -48,10 +49,10 @@ export const LoginJWT = () => {
         event.preventDefault();
         const passwordEncriptado = Md5.hashStr(form.password);
 
-        fetch('http://localhost:3001/auth/login', {
+        fetch( `${Link}/auth/login`, { 
             method: 'POST',
             body: JSON.stringify({
-                "username": form.username,
+                "email": form.username,
                 "password": passwordEncriptado
             }),
             headers: {
@@ -64,8 +65,8 @@ export const LoginJWT = () => {
             throw new Error('Error en la llamada http, no fue ok');
         }).then(json => {
 
-            localStorage.setItem('token', json.token);
-            const decodedToken = jwtDecode<TokenClaims>(json.token);
+            localStorage.setItem('token', json.access_token);
+            const decodedToken = jwtDecode<TokenClaims>(json.access_token);
 
             dispatch(login({
                 username: decodedToken.username,

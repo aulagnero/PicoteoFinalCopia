@@ -17,8 +17,9 @@ const Card: React.FC = () => {
 
   useEffect(() => {
     // Llamada a la API para obtener detalles del producto desde el endpoint "mantenedor"
-    fetch('https://f401-200-112-5-153.ngrok-free.app/productos', {
+    fetch('http://localhost:3000/products', {
       method: "GET",
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         "ngrok-skip-browser-warning": "1"
@@ -79,7 +80,7 @@ const Card: React.FC = () => {
               <div className='card-img-top'>
                 {producto.imagen}
                 <img
-                  /* width="90%" */
+                  
 
                   src={producto.imagen ? decodeBase64Image(producto.imagen) : ""}
                   alt="foto producto"
