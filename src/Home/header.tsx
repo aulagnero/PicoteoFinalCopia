@@ -1,12 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Barra2 from "./Barramenu";
 //import { Banner } from "./Banner";
 import "./header.css"
 import "./barra.css"
-// import imgcarrito from "../Home/imagenes/carritocompra.png"
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-//import imgusuario from "./imagenes/usuario.png"
-//import logo from "./imagenes/logo-naciones.png"
 import { Link } from 'react-router-dom';
 import LogoPagina from "./Logo-viña-picoteo.svg"
 
@@ -14,42 +9,46 @@ import LogoPagina from "./Logo-viña-picoteo.svg"
 function Menu() {
 
     return (
+        <>
 
-        <header>
 
-            <div className="contenedor">
-                <div className="conten1">
-                    <Link to="/home"><img className='logovinapicoteo' src={LogoPagina} alt="" /> </Link>
 
+            <div className="container ">
+
+                <div className="row contenedor-menu">
+
+                    <div className=" col-2 conten1">
+                        <Link to="/home"><img className='logovinapicoteo' src={LogoPagina} alt="" /> </Link>
+
+
+                    </div>
+                    <div className="col-8">
+                        <Barra2 />
+                    </div>
+
+
+                    <div className="col-1 conten3">
+                        <Link to="/login">
+                            <img className="carrito" src="src/Home/imagenes/person.svg" alt="" />
+
+                        </Link>
+                    </div>
+                    <div className="col-1 conten3">
+
+                        <Link to="/mantenedor"><img src="src/Home/imagenes/shopping-cart.svg" alt="carrito de compras"/></Link>
+
+
+                        {/* <img className="logousuario" src={imgcarro} alt="" /> */}
+                    </div>
 
                 </div>
-                <div className="conten2">
-                    <Barra2 />
-                </div>
-
-
-                <div className="conten3">
-                    <Link to="/login">
-                        <img className="carrito" src="src/Home/imagenes/Shopicon-user.svg" alt="" />
-
-                    </Link>
-                </div>
-                <div className="conten4">
-
-                    <Link to="/mantenedor"><button><FontAwesomeIcon icon={faCartShopping} /></button></Link>
-
-
-                    {/* <img className="logousuario" src={imgcarro} alt="" /> */}
-                </div>
-
-
             </div >
             <div className="contenedorxx">
 
 
             </div>
-        </header>
 
+        </>
     )
 }
 export default Menu;

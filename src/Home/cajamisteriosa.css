@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Novatica;
-  src: url(../fonts/novatica/Novatica-Bold.woff);
-}
-
 
 
 .textoo{
@@ -22,7 +17,7 @@
   font-family: Novatica, sans-serif;
   font-size: 38px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 58px; 
 }
 
