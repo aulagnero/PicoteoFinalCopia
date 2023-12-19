@@ -52,7 +52,7 @@ const FormIngresoProdBS: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://f401-200-112-5-153.ngrok-free.app/productos", {
+      const response = await fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Llamada } from "./llamadaCard";
-import Card2 from "./Card2";
+import Card2, { Link } from "./Card2";
 import "./cajamisteriosa.css"
 
 interface Producto {
@@ -11,7 +11,7 @@ interface Producto {
 
 function CajaMisteriosa() {
   const [productos, setProductos] = useState<Producto[]>([]);
-  const ENDPOINT: string = 'https://f401-200-112-5-153.ngrok-free.app/productos';
+  const ENDPOINT: string = Link + "";
 
   return (
     <>

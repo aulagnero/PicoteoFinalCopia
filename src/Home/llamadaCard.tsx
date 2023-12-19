@@ -1,5 +1,5 @@
-// llamadaCard.tsx
 import { useEffect } from "react";
+
 
 interface Producto {
   id: string;
@@ -16,6 +16,7 @@ export const Llamada: React.FC<LlamadaProps> = ({ endpoint, setData }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log(endpoint);
         const response = await fetch(endpoint, {
           method: "GET",
           headers: {
@@ -23,7 +24,7 @@ export const Llamada: React.FC<LlamadaProps> = ({ endpoint, setData }) => {
             "ngrok-skip-browser-warning": "1"
           },
         });
-
+        
         if (!response.ok) {
           throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
@@ -38,6 +39,6 @@ export const Llamada: React.FC<LlamadaProps> = ({ endpoint, setData }) => {
     fetchData();
   }, [endpoint, setData]);
 
-  return null; // O devuelve cualquier otro componente si es necesario
+  return null; 
 };
 export default Llamada;
