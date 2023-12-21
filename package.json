@@ -25,6 +25,7 @@
     "jwt-decode": "^4.0.0",
     "md5": "^2.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-redux": "^8.1.3",

@@ -22,9 +22,9 @@ const ProductCardList: React.FC = () => {
 
   return (
     <div>
-      <h2 className='titulo-card-list'><div>Elevas tu experiencia culinaria maridando tu vino con un snack</div></h2>
+      <h2 className='titulo-card-list'>Elevas tu experiencia culinaria maridando tu vino con un snack</h2>
       <div className='container snack-recomendado'>
-        {productos.slice(4,8).map((producto) => (
+        {productos.slice(0,4).map((producto) => (
           <Card3 key={producto.id} producto={producto} />
         ))}
       </div>

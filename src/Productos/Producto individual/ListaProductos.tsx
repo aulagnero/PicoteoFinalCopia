@@ -4,6 +4,7 @@ import ProductoIndividual from './ProductoIndividual';
 import { Producto } from './ProductoIndividual';
 import ProductCardList from './ProductCardList';
 import RedesSociales from './RedesSociales';
+import Preguntas from './Preguntas';
 
 function ListaProductos() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -28,6 +29,7 @@ function ListaProductos() {
       {producto && <ProductDetail productId={producto.id.toString()} title={producto.nombre} description={producto.descripcion} price={producto.precio} />}
       <ProductCardList />
       <RedesSociales />
+      <Preguntas />
     </div>
   );
 }

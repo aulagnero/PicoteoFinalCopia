@@ -32,6 +32,9 @@
 
 .contenedor-cards {
   display: flex;
-  justify-content: space-around;
-  max-width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }

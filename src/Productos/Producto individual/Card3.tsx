@@ -58,59 +58,59 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
   return (
     <>
-      <div className="card" style={{ width: '200px', padding: '24px' , display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        
-          <Swipe className="carousel" swipeOptions={{ continuous: true }}>
-            {producto.imagen.map((img, index) => (
-              <div key={index} style={{ width: '100%' }}>
-                <img className='imagen-producto' src={img} alt={`Imagen del producto ${index + 1}`} style={{ width: '100%', display: 'block' }} />
-              </div>
-            ))}
-          </Swipe>
+      <div className="card" style={{ width: '200px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-          <div className="card-body">
-            <div className="card-title " style={{ height: '50px' }}>
-              <h2 className="titulo  ">{producto.nombre}</h2>
-
+        <Swipe className="carousel" swipeOptions={{ continuous: true }}>
+          {producto.imagen.map((img, index) => (
+            <div key={index} style={{ width: '100%' }}>
+              <img className='imagen-producto' src={img} alt={`Imagen del producto ${index + 1}`} style={{ width: '100%', display: 'block' }} />
             </div>
+          ))}
+        </Swipe>
+
+        <div className="card-body">
+          <div className="card-title">
+            <div className="titulo">{producto.nombre}</div>
+
+          </div>
 
 
-            <div className='row cuerpo-tarjeta'>
-              <div className="card-text2 col-12 ">$ {producto.precio}</div>
-              <div className='col-12'>
-                <Rating value={producto.valoracion} />
-              </div>
-              <div className="card-text desc" style={{ height: '50px' }}>
-                <p>{producto.descripcion}</p>
-              </div>
+          <div className='row cuerpo-tarjeta'>
+            <div className="card-text2 col-12 ">$ {producto.precio}</div>
+            <div className='col-12'>
+              <Rating value={producto.valoracion} />
             </div>
+            <div className="card-text desc" style={{ height: '50px' }}>
+              <p>{producto.descripcion}</p>
+            </div>
+          </div>
 
 
 
-            <br />
+          <br />
 
 
 
-            <div className="row">
-              <div className="col-8">
-                <div className="btn-group">
-                  <button className="btn btn-secondary" onClick={handleDecrease}>
-                    -
-                  </button>
-                  <span className="btn btn-secondary">{quantity}</span>
-                  <button className="btn btn-secondary" onClick={handleIncrease}>
-                    +
-                  </button>
-                </div>
-              </div>
-              <div className="col-4">
-                <button className="btn btn-secondary" onClick={handleAddToCart}>
-                  <img src="src/assets/CARRO 1.svg" alt="carrito" />
+          <div className="row">
+            <div className="col-8">
+              <div className="btn-group">
+                <button className="btn btn-secondary" onClick={handleDecrease}>
+                  -
+                </button>
+                <span className="btn btn-secondary">{quantity}</span>
+                <button className="btn btn-secondary" onClick={handleIncrease}>
+                  +
                 </button>
               </div>
             </div>
+            <div className="col-4">
+              <button className="btn btn-secondary" onClick={handleAddToCart}>
+                <img src="src/assets/CARRO 1.svg" alt="carrito" />
+              </button>
+            </div>
           </div>
-        
+        </div>
+
       </div>
     </>
   );

@@ -4,12 +4,13 @@ import Card2, { Link } from "./Card2";
 import "./cajamisteriosa.css"
 
 interface Producto {
-  id: string;
+  valoracion: number;
+  id: number;
   nombre: string;
-  precio: number;
   categoria: string;
   descripcion: string;
-  imagen: string;
+  precio: number;
+  imagen: string[];
 }
 
 function CajaMisteriosa() {
@@ -23,21 +24,22 @@ function CajaMisteriosa() {
         <div className='row'>
           <h2 className="textoo"><span >Productos individuales</span></h2>
         </div>
-          <div className="row contenedor-cards">
-            <div className="col-2 text-lateral">
+        <div className="row contenedor-cards">
+          <div className="col-2 text-lateral">
             <p className="text-lateral">combina<br />el mejor<br />vino con<br />el picoteo<br />perfecto</p>
-            </div>
-            <div className="row col-10 target">
-              <Llamada endpoint={ENDPOINT} setData={setProductos} />
-
-              {productos.length > 0 ? (
-                productos.map((prod, index) => <Card2 key={index} producto={prod} />)
-              ) : (
-                <p>Cargando...</p>
-              )}
-            </div>
           </div>
-        
+          <div className="row col-10 target">
+            <Llamada endpoint={ENDPOINT} setData={setProductos} />
+
+
+            {productos.length > 0 ? (
+              productos.slice(0, 3).map((prod, index) => <Card2 key={index} producto={prod} />)
+            ) : (
+              <p>Cargando...</p>
+            )}
+          </div>
+        </div>
+
 
 
       </div>
