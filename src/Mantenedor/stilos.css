@@ -23,3 +23,32 @@
     width: 80%;
     height: 80%;
 }
+
+.boton-listar
+ {
+    color: var(--Text-White, var(--ICON-WHITE, #F5F5F5));
+    text-align: center;
+    /* Button/L */
+    font-family: 'Novatica', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+    border-radius: 8px;
+    background: var(--Buttons-Default, #007D7B);
+    /* Button Shadow */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.boton-listar :hover {
+    background:   #820A7D;
+    border-color:   #820A7D;
+    color: white;
+}

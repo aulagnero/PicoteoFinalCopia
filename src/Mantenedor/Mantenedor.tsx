@@ -56,7 +56,7 @@ const FormIngresoProdBS: React.FC = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          
+
         },
         body: JSON.stringify(formData),
       });
@@ -92,105 +92,105 @@ const FormIngresoProdBS: React.FC = () => {
     <div className="contenedor-body-checkout">
       <div className="container">
         <div className="row g">
-          <div className="col-3 ingreso">Ingreso de productos</div>
-        
-        <div className="col-9">
-          <form className="row g-3" onSubmit={handleSubmit}>
-            <div className="col-md-6">
-              <label htmlFor="nameInput" className="form-label label-datos mt-3">
-                Nombre
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="nameInput"
-                placeholder="Adobe Gran Reserva"
-                name="nombre"
-                onChange={handleChange}
-                value={formData.nombre}
-              />
-            </div>
+          <h2><div className="col-12 ingreso">Ingreso de productos</div></h2>
 
-            <div className="col-md-6">
-              <label htmlFor="categoryInput" className="form-label label-datos mt-3">
-                Categoría
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="categoryInput"
-                placeholder="Vino"
-                name="categoria"
-                onChange={handleChange}
-                value={formData.categoria}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <label htmlFor="descriptionInput" className="form-label label-datos">
-                Descripción
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="descriptionInput"
-                placeholder="Carmenere orgánico 750cc"
-                name="descripcion"
-                onChange={handleChange}
-                value={formData.descripcion}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <label htmlFor="priceInput" className="form-label label-datos">
-                Precio
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="priceInput"
-                placeholder="$ 11111"
-                name="precio"
-                onChange={handleChange}
-                value={formData.precio}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <label htmlFor="imageInput" className="form-label label-datos">
-                Imágenes
-              </label>
-
-              <div {...getRootProps()} className="dropzone">
-                <input {...getInputProps()} />
-                <p>Arrastra y suelta las imágenes aquí o haz clic para seleccionarlas.</p>
+          <div className="col-12">
+            <form className="row g-3" onSubmit={handleSubmit}>
+              <div className="col-md-6">
+                <label htmlFor="nameInput" className="form-label label-datos mt-3">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="nameInput"
+                  placeholder="Adobe Gran Reserva"
+                  name="nombre"
+                  onChange={handleChange}
+                  value={formData.nombre}
+                />
               </div>
 
-              {formData.imagen.length > 0 && (
-                <div>
-                  <p>Imágenes seleccionadas:</p>
-                  {formData.imagen.map((image: string | undefined, index: React.Key | null | undefined) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`imagen-${index}`}
-                      style={{ maxWidth: "100px", maxHeight: "100px", margin: "5px" }}
-                    />
-                  ))}
+              <div className="col-md-6">
+                <label htmlFor="categoryInput" className="form-label label-datos mt-3">
+                  Categoría
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="categoryInput"
+                  placeholder="Vino"
+                  name="categoria"
+                  onChange={handleChange}
+                  value={formData.categoria}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="descriptionInput" className="form-label label-datos">
+                  Descripción
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="descriptionInput"
+                  placeholder="Carmenere orgánico 750cc"
+                  name="descripcion"
+                  onChange={handleChange}
+                  value={formData.descripcion}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="priceInput" className="form-label label-datos">
+                  Precio
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="priceInput"
+                  placeholder="$ 11111"
+                  name="precio"
+                  onChange={handleChange}
+                  value={formData.precio}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <label htmlFor="imageInput" className="form-label label-datos">
+                  Imágenes
+                </label>
+
+                <div {...getRootProps()} className="dropzone">
+                  <input {...getInputProps()} />
+                  <p>Arrastra y suelta las imágenes aquí o haz clic para seleccionarlas.</p>
                 </div>
-              )}
-            </div>
 
-            <div className="col-md-6">
-              {/* React Toastify Container para mostrar notificaciones */}
-              <ToastContainer />
+                {formData.imagen.length > 0 && (
+                  <div>
+                    <p>Imágenes seleccionadas:</p>
+                    {formData.imagen.map((image: string | undefined, index: React.Key | null | undefined) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt={`imagen-${index}`}
+                        style={{ maxWidth: "100px", maxHeight: "100px", margin: "5px" }}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
 
-              <button type="submit" className="btn btn-secondary boton-datos mb-3 mt-3">
-                INGRESAR
-              </button>
-            </div>
-          </form>
-        </div>
+              <div className="col-md-6">
+                {/* React Toastify Container para mostrar notificaciones */}
+                <ToastContainer />
+
+                <button type="submit" className="btn btn-secondary boton-ingresar mb-3 mt-3">
+                  Ingresar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

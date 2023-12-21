@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Swipe from 'react-swipe';
-import './ProductCardBS.css';
+import './Card3.css';
 
-
- 
 
 export const Link = "http://localhost:3000/products"
 export interface Producto {
@@ -77,7 +75,7 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
           </div>
 
 
-          <div className='row contenido-tarjeta'>
+          <div className='row cuerpo-tarjeta'>
             <div className="card-text2 col-12 ">$ {producto.precio}</div>
             <div className='col-12'>
               <Rating value={producto.valoracion} />

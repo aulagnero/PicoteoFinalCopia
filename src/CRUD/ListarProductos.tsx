@@ -78,16 +78,21 @@ const ListarProductos = () => {
     };
 
     return (
-        <div>
+
+        <div className="contenedor-body-checkout">
+        <div className="container">
+            <div className="row g">
+            <h2><div className="col-12 ingreso">Mantenedor de productos</div></h2>
+
             <div className="container col-12 ">
                 <div className="row border-bottom mb-3 ">
-                    <div className="col-1">ID</div>
-                    <div className="col-2">Nombre</div>
-                    <div className="col-3">Description</div>
-                    <div className="col-2">Category</div>
-                    <div className="col-1">Price</div>
-                    <div className="col-2">Image</div>
-                    <div className="col-1">Actions</div>
+                    <div className="col-1 label-datos">ID</div>
+                    <div className="col-2 label-datos">Nombre</div>
+                    <div className="col-2 label-datos">Description</div>
+                    <div className="col-1 label-datos">Category</div>
+                    <div className="col-1 label-datos">Price</div>
+                    <div className="col-2 label-datos">Image</div>
+                    <div className="col-3 label-datos">Actions</div>
                 </div>
                 {products.map(product => (
                     <div key={product.id} className="row border-bottom mb-3">
@@ -105,14 +110,14 @@ const ListarProductos = () => {
                                 product.nombre
                             )}
                         </div>
-                        <div className="col-3">
+                        <div className="col-2">
                             {editingProductId === product.id ? (
                                 <input type="text" value={editedProduct.categoria} onChange={(e) => handleChange(e, 'categoria')} />
                             ) : (
                                 product.categoria
                             )}
                         </div>
-                        <div className="col-2">
+                        <div className="col-1">
                             {editingProductId === product.id ? (
                                 <input type="text" value={editedProduct.descripcion} onChange={(e) => handleChange(e, 'descripcion')} />
                             ) : (
@@ -133,16 +138,16 @@ const ListarProductos = () => {
                                 <img src={product.imagen} alt={product.nombre} className="product-image2" />
                             )}
                         </div>
-                        <div className="col-1 d-flex justify-content-evenly ">
+                        <div className="col-3 d-flex justify-content-evenly ">
                             {editingProductId === product.id ? (
-                                <button className="btn btn-primary row" onClick={() => handleUpdate(product.id)}>Save</button>
+                                <button className="btn btn-primary boton-listar" onClick={() => handleUpdate(product.id)}>Save</button>
                             ) : (
                                 <div className="d-flex ">
                                     <div >
-                                        <button className="btn btn-primary botoneditar" onClick={() => handleEdit(product)}>Edit</button>
+                                        <button className="btn btn-primary boton-listar" onClick={() => handleEdit(product)}>Edit</button>
                                     </div>
                                     <div>
-                                        <button className="btn btn-danger  botoneditar" onClick={() => handleDelete(product.id)}>Delete</button>
+                                        <button className="btn btn-primary boton-listar" onClick={() => handleDelete(product.id)}>Delete</button>
                                     </div>
                                 </div>
 
@@ -153,8 +158,10 @@ const ListarProductos = () => {
                     </div>
                 ))}
             </div>
+            </div>
 
         </div >
+        </div>
     )
 };
 

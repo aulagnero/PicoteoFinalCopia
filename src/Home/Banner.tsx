@@ -6,7 +6,7 @@ export function Banner() {
 
     return (
 
-        <div className="container">
+        <div className="container imagenbanner">
           
            
             <img className="imagenbanner" src={banner1} alt="" /> 

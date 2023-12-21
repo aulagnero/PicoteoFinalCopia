@@ -1,0 +1,25 @@
+.títulos {
+    padding-left: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 120px;
+    color: var(--text-default, #252525);
+    /* Headlines/L */
+    font-family: novatica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 44px;
+    text-align: center;
+}
+
+.publicaciones-ig {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.frame-ig {
+    max-width: 260px;
+    justify-content: start;
+}
