@@ -1,14 +1,11 @@
 .contenedor-body-checkout {
     display: flex;
-    height: 100%;
     flex-direction: column;
-    align-items: center;
-    gap: 48px;
-    border-radius: 24px;
-    background-color: #D9D9D9;
-    margin-bottom: 30px;
-    padding: 20 px;
-
+    align-items: flex-start;
+    gap: 24px;
+   
+    border-radius: 16px;
+    background: var(--Others-Cards, #F9F9F7);
 
 }
 
@@ -57,7 +54,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
 
 }
 
@@ -173,7 +170,7 @@
 
 .campo-select {
     display: flex;
-    
+
     justify-content: space-between;
     width: 800px;
 
@@ -246,32 +243,38 @@
     color: black;
 }
 
-.boton-datos {
-    width: 350px;
-    height: 48px;
-    padding: 0px 24px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background-color: #848484;
-    border-color: #848484;
-    color: #F8F5F5;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: 'Lato', sans-serif;
+.boton-ingresar {
+    color: var(--Text-White, var(--ICON-WHITE, #F5F5F5));
+    text-align: center;
+    /* Button/L */
+    font-family: 'Novatica', sans-serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 28px;
+
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /*flex: 1 0 0;*/
+    border-radius: 8px;
+    background: var(--Buttons-Default, #007D7B);
+    /* Button Shadow */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 
 }
 
-.boton-datos:hover {
-    background: rgb(50, 246, 0);
-    border-color: rgb(50, 246, 0);
-    color: black;
+.boton-ingresar:hover {
+    background:   #820A7D;
+    border-color:   #820A7D;
+    color: white;
 }
 
 .botones-datos {
-    display:flex;
+    display: flex;
     width: 800px;
     gap: 40px;
 }
@@ -287,21 +290,15 @@
 }
 
 .ingreso {
-    color: #000;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
+    color: var(--Titles-Black, #252525);
+    font-family: 'Novatica', sans-serif;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 42px;
-    padding: 0px 56px;
+    font-weight: 700;
+    line-height: 44px;
     display: flex;
-    width: 268px;
-    height: 144px;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    flex-shrink: 0;
 }
 
 .seleccione-pago {
@@ -440,4 +437,15 @@
     height: 110px;
     flex-shrink: 0;
 
+}
+
+.fondo-mantenedor {
+    padding: 80px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    border-radius: 16px;
+    background: var(--Others-Cards, #F9F9F7);
 }

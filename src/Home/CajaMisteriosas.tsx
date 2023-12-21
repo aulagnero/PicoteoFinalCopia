@@ -7,6 +7,9 @@ interface Producto {
   id: string;
   nombre: string;
   precio: number;
+  categoria: string;
+  descripcion: string;
+  imagen: string;
 }
 
 function CajaMisteriosa() {
@@ -20,8 +23,8 @@ function CajaMisteriosa() {
         <div className='row'>
           <h2 className="textoo"><span >Productos individuales</span></h2>
         </div>
-          <div className="row">
-            <div className="col-2">
+          <div className="row contenedor-cards">
+            <div className="col-2 text-lateral">
             <p className="text-lateral">combina<br />el mejor<br />vino con<br />el picoteo<br />perfecto</p>
             </div>
             <div className="row col-10 target">

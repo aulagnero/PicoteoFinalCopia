@@ -15,10 +15,12 @@
   color:  #820A7D;
   /* Headlines/XL */
   font-family: Novatica, sans-serif;
-  font-size: 38px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 58px; 
+  line-height: 48px; 
+  display: flex;
+  align-items: center;
 }
 
 .target{
@@ -28,3 +30,8 @@
  
 }
 
+.contenedor-cards {
+  display: flex;
+  justify-content: space-around;
+  max-width: auto;
+}
