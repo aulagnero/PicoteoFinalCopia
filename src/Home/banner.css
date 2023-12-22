@@ -1,12 +1,14 @@
 
 
 .imagenbanner{
-    width: 100%;
+    display: flex;
+    width: 1140px;
     height: auto;
-    border-radius: 23px;
-    border: 0px;
-}
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
 
+}
 
 
 

@@ -1,29 +1,90 @@
 
-import "./cajamisteriosa.css"
+import "./AppRegala.css"
 
 function AppRegala() {
 
     return (
         <>
-            <div className='principal-container'>
-                <div className='titulo'><h2>Regala</h2></div>
-                <div className='card-container'>
-                    <div className='parrafo'><p>Lorem ipsum dolor sit amet consectetur adipiscing elit elementum, platea magna nullam nec iaculis egestas vehicula lectus odio potenti himenaeos.</p></div>
-                    <div className='recuadro'>
-                        <h4>Elige una caja</h4>
-                        <p>Sociosqu ultrices cubilia tincidunt diam tortor conubia suscipit vel, platea elementum suscipit etiam porttitor penatibus laoreet mattis tellus eget scelerisque aptentquisque duis eros torquent vulputate eleifend arcu platea, pretium nisi faucibus penatibus. </p>
-                    </div>
-                    <div className='recuadro'>
-                        <h4>Arma una caja</h4>
-                        <p>Sociosqu ultrices cubilia tincidunt diam tortor conubia suscipit vel, platea elementum suscipit etiam porttitor penatibus laoreet mattis tellus eget scelerisque aptentquisque duis eros torquent vulputate eleifend arcu platea, pretium nisi faucibus penatibus. </p>
-                    </div>
-                    <div className='recuadro'>
-                        <h4>Regala una suscripción</h4>
-                        <p>Sociosqu ultrices cubilia tincidunt diam tortor conubia suscipit vel, scelerisque aptentquisque duis eros torquent vulputate eleifend arcu platea, pretium nisi faucibus penatibus.. </p>
-                    </div>
+            <div className="container">
+
+                <div className="row">
+                    <h2 className="títulos">Beneficios</h2>
                 </div>
 
+                <div className="row">
+                    <div className="col-4 columna-recuadro">
+                        <div className="marco-recuadro">
+                            <img src="src/Home/imagenes/regalo.png" alt="imagen de un paquete de regalo" />
+                        </div>
+                        <div className="texto-recuadro">
+                            <p >Regala una experiencia inolvidable a ti mismo o a tus seres queridos</p>
+                        </div>
+                    </div>
+
+                    <div className="col-4 columna-recuadro">
+                        <div className="marco-recuadro">
+                            <img src="src/Home/imagenes/botella-copa.png" alt="imagen de una botella y una copa de vino" />
+                        </div>
+                        <div>
+                            <p className="texto-recuadro">Eleva la experencia culinario con la maridaje de vinos con comida picoteo
+</p>
+                        </div>
+                    </div>
+
+                    <div className="col-4 columna-recuadro">
+                        <div className="marco-recuadro">
+                            <img src="src/Home/imagenes/casita.png" alt="imagen de una casita" />
+                        </div>
+                        <div>
+                            <p className="texto-recuadro">Podrás disfrutar del mundo del vino desde la comodidad de tu casa
+</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="row">
+                    <h3 className="títulos">Síguenos en Instagram</h3>
+                </div>
+
+                <div className="row publicaciones-ig">
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 244.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 245.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 246.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 247.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 248.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 249.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 250.png" width="270px" alt="" />
+                    </div>
+                    <div className="col-4 frame-ig">
+                    <img src="src/Home/imagenes/Rectangle 251.png" width="270px" alt="" />
+                    </div>
+
+
+                </div>
+
+
+
+
             </div>
+
+
+
+
+            
         </>
     )
 }

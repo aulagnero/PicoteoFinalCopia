@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Novatica;
+    src: url(/fonts/novatica/Novatica-Bold.woff);
+}
+
+.columna-recuadro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-recuadro {
+    width: 232px;
+    height: 64px;
+    
+    color: var(--text-default, #252525);
+    text-align: center;
+    /* Body/S */
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.títulos {
+    padding-left: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 120px;
+    color: var(--text-default, #252525);
+    /* Headlines/L */
+    font-family: novatica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 44px;
+    text-align: center;
+}
+
+.publicaciones-ig {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.frame-ig {
+    max-width: 260px;
+    justify-content: start;
+}

@@ -1,93 +1,112 @@
 /* COMENTARIO DE PRUEBA DE RAMA + agregado ariel*/
 
-*{
+* {
     box-sizing: border-box;
 }
 
-:root{
+:root {
     background-color: #ffffff;
 }
-.carrito{
+
+.carrito {
     width: 24px;
-    
+align-items: center;
+
 }
 
-.contenedor{
-    
-   display: flex;
-   flex-direction: row;
+.contenedor {
+
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100px;
 }
 
-.contenedor:has(.conten4){
-    padding: 0 3vw ;
+.contenedor:has(.conten4) {
+    padding: 0 3vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.conten1{
-    
-    background:none;
-    width: 12%;
-    height: 80%;
+
+.conten1 {
+
+    background: none;
+    width: 184px;
 }
-.conten1 img{
+
+.contenedor-menu {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.conten1 img {
     width: 100%;
     height: 100%;
 }
-.conten2{
-    
-    width: 70%;
-    
-    
-}
-.logo{
-    
+
+
+
+.logo {
+
     margin-top: 15px;
     width: 100%;
 }
-.conten3{
-    width: 10%;
-   
-    
+
+.conten3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
 }
-.conten4{
+
+.conten4 {
 
     width: 48px;
     height: 48px;
-    
+
 }
-.conten4 svg{
-    max-width: 24px;
-    height: 24px;
+
+.conten4 svg {
+    max-width: 48px;
+    height: 48px;
 }
-.conten4 button{
+
+.conten4 button {
     width: 48px;
     height: 48px;
     border: none;
-    background:none;
+    background: none;
 }
-.productos{
+
+.productos {
     width: 100px;
     height: 150px;
     background-color: aqua;
 }
-.clubvino{
+
+.clubvino {
     width: 100px;
     height: 150px;
     background-color: rgb(181, 66, 160);
 }
-.suscripciones{
+
+.suscripciones {
     width: 100px;
     height: 150px;
     background-color: rgb(128, 158, 38);
 }
-.logousuario{
+
+.logousuario {
     margin-top: 20px;
-width: 30%;
+    width: 30%;
 }
-.logovinapicoteo{
+
+.logovinapicoteo {
     height: 100%;
     width: 100%;
 }

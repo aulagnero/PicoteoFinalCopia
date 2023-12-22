@@ -1,32 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export interface UserState {
+    username: string;
+    email: string;
+    isAuth: boolean;
+    role: string[]
+}
 
-    nombreapellido: "",
-    rut: "",
-    telefono: "",
-    direccion: "",
-    referencia: "",
-};
-
-
+const initialState: UserState = {
+    username: '',
+    email: '',
+    isAuth: false,
+    role: []
+}
 
 export const userSlice = createSlice({
-
-    name: "user",
+    name: 'user',
     initialState,
     reducers: {
-        addUser: (state, action) => {
-         const {nombreapellido,rut, telefono, direccion, referencia } =  action.payload
-            state.nombreapellido = nombreapellido;
-            state.rut = rut;
-            state.telefono = telefono;
-            state.direccion = direccion;
-            state.referencia = referencia;
+        login: (_state, action: PayloadAction<UserState>) => {
+            const newState = { ...action.payload }
+            console.log("login reducer", newState)
+            return newState;
+        },
+        logout: () => {
+            console.log("logout reducer")
+            localStorage.removeItem('token');
+            return { ...initialState }
 
         }
     }
 
 });
-export const {addUser} = userSlice.actions;
+
+export const { login, logout } = userSlice.actions;
 export default userSlice.reducer;

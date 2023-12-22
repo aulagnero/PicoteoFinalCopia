@@ -1,178 +1,331 @@
+@font-face {
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: novatica;
+  src: url(../src/fonts/novatica/Novatica-Medium.woff);
+  font-weight: 500;
+}
+
+.fondo {
+  background: url(src/Home/imagenes/vineyard-light.jpg) lightgray 70% / cover no-repeat;
+
+  width: 1320px;
+  height: 600px;
+}
+
+.footer-top {
+  height: 300px;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-bottom: 80px;
+  padding-right: 120px;
+  justify-content: space-evenly;
+  gap: auto;
+}
+
+.titulo-footer {
+  color: var(--text-default, #252525);
+  /* Headlines/M */
+  font-family: novatica, sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 10px;
+  
+}
+
+.body-footer {
+  color: var(--text-default, #252525);
+  /* Body/M */
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0px;
+}
+
+.btn-primary {
+  width: 240px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--buttons-default, #007D7B);
+  /* Button Shadow */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--text-white, var(--ICON-WHITE, #F5F5F5));
+  text-align: center;
+  /* Button/L */
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.form-suscripcion {
+  width: 265px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.footer-logos {
+  width: 190px;
+  padding: 0px;
+}
+
+.footer-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.footer-links {
+  justify-content: end;
+}
+
+.a-footer {
+  background: transparent;
+  color: var(--text-default, #252525);
+  /* Button/XS */
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  /* 114.286% */
+}
+
+.rrss {
+  display: flex;
+  justify-content: space-between;
+}
+
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    
+  max-width: 1280px;
+  margin: 0 auto;
+
   /*   text-align: center; */
-    width: 100%;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Estilos para el contenedor del footer */
+.footer-container {
+  background-color: #333;
+  /* Color de fondo del footer */
+  color: rgb(0, 0, 0);
+  /* Color del texto en el footer */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  width: 100%;
+}
+
+/* Estilos para cada bloque dentro del footer */
+.footer-subscribe {
+  display: flex;
+  /* Utiliza flexbox para distribuir los elementos */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  height: 200px;
+  justify-content: space-between;
+  /* Espacio uniforme entre columnas */
+  background-color: #8f8d8d;
+}
+
+.footer-subscribe .subscribe-item {
+  flex: 1;
+  /* Cada columna flex ocupa un espacio igual */
+  background-color: #8f8d8d;
+  /* Color de fondo de las columnas */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  margin: 15px;
+}
+
+.footer-subscribe .subscribe-item .subscribe-item-img {
+  flex: 1;
+  /* Cada columna flex ocupa un espacio igual */
+  background-color: #c3bfbf;
+  /* Color de fondo de las columnas */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  height: 100%;
+  border-radius: 10%
+}
+
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  margin: 0px 15px 15px 100px;
+}
+
+.subscribe-email {
+  display: flex;
+  /* Utiliza flexbox para distribuir los elementos */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  height: 50px;
+  justify-content: space-between;
+  /* Espacio uniforme entre columnas */
+  background-color: #8f8d8d;
+}
+
+.subscribe-email .subscribe-email-label {
+  margin-right: 15px;
+  margin-top: 15px;
+  width: 30%;
+}
+
+.subscribe-email .subscribe-email-input {
+  margin-right: 15px;
+  margin-top: 20px;
+  width: 70%;
+
+}
+
+
+.footer-info {
+  display: flex;
+  /* Utiliza flexbox para distribuir los elementos */
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  height: 200px;
+  justify-content: space-between;
+  /* Espacio uniforme entre columnas */
+  background-color: #6f6f6f;
+}
+
+.footer-info .info-item {
+  flex: 1;
+  /* Cada columna flex ocupa un espacio igual */
+  background-color: #6f6f6f;
+  /* Color de fondo de las columnas */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  margin: 35px 15px 35px 35px;
+}
+
+.footer-info .info-item .flexBigContainer {
+  display: flex;
+  background-color: #4b4b4b;
+  height: 70%;
+}
+
+.footer-info .info-item .flexSmallContainer {
+  display: flex;
+  background-color: #6f6f6f;
+  height: 30%;
+}
+
+.footer-info .info-item .flexSmallContainer .small-item {
+  flex: 1;
+  /* Cada columna flex ocupa un espacio igual */
+  background-color: #8f8d8d;
+  /* Color de fondo de las columnas */
+  text-align: center;
+  /* Centra el contenido horizontalmente */
+  margin: 10px;
+  border-radius: 10%;
+}
+
+
+.a-footer {
+  text-decoration: wavy;
+  color: #000000;
+}
+
+.li-footer {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+/* Estilos para los encabezados h2 */
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Estilos para los párrafos p */
+p {
+  font-size: 1rem;
+}
+
+/* Estilos para la lista ul */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilos para los elementos de la lista li */
+li {
+  margin-bottom: 5px;
+}
+
+/* Estilos para los enlaces a */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos para los enlaces a en hover */
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+
+  to {
+    transform: rotate(360deg);
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
-  /* Estilos para el contenedor del footer */
-  .footer-container {
-    background-color: #333; /* Color de fondo del footer */
-    color: rgb(0, 0, 0); /* Color del texto en el footer */
-    text-align: center; /* Centra el contenido horizontalmente */
-    width: 100%;
-  }
-  
-  /* Estilos para cada bloque dentro del footer */
-  .footer-subscribe {
-    display: flex;          /* Utiliza flexbox para distribuir los elementos */
-    width: 100%;            /* Ocupa todo el ancho disponible */
-    height: 200px;
-    justify-content: space-between; /* Espacio uniforme entre columnas */
-    background-color: #8f8d8d;
-  }  
-  
-  .footer-subscribe .subscribe-item {
-    flex: 1;                /* Cada columna flex ocupa un espacio igual */
-    background-color: #8f8d8d; /* Color de fondo de las columnas */
-    text-align: center;     /* Centra el contenido horizontalmente */
-    margin: 15px;
-  }
-  
-  .footer-subscribe .subscribe-item .subscribe-item-img {
-    flex: 1;                /* Cada columna flex ocupa un espacio igual */
-    background-color: #c3bfbf; /* Color de fondo de las columnas */
-    text-align: center;     /* Centra el contenido horizontalmente */
-    height: 100%;
-    border-radius: 10%
-  }
-  
-  .subscribe-form {
-    display: flex;
-    width: 100%;
-    margin: 0px 15px 15px 100px;
-  }
-  .subscribe-email {
-    display: flex;          /* Utiliza flexbox para distribuir los elementos */
-    width: 100%;            /* Ocupa todo el ancho disponible */
-    height: 50px;
-    justify-content: space-between; /* Espacio uniforme entre columnas */
-    background-color: #8f8d8d;
-  }
-  .subscribe-email .subscribe-email-label {
-    margin-right: 15px;
-    margin-top: 15px;
-    width: 30%;
-  }
-  .subscribe-email .subscribe-email-input {
-    margin-right: 15px;
-    margin-top: 20px;
-    width: 70%;
-  
-  }
-  
-  
-  .footer-info {
-    display: flex;          /* Utiliza flexbox para distribuir los elementos */
-    width: 100%;            /* Ocupa todo el ancho disponible */
-    height: 200px;
-    justify-content: space-between; /* Espacio uniforme entre columnas */
-    background-color: #6f6f6f;
-  }
-  
-  .footer-info .info-item {
-    flex: 1;                /* Cada columna flex ocupa un espacio igual */
-    background-color: #6f6f6f; /* Color de fondo de las columnas */
-    text-align: center;     /* Centra el contenido horizontalmente */
-    margin: 35px 15px 35px 35px;
-  }
-  
-  .footer-info .info-item .flexBigContainer{
-    display: flex;
-    background-color: #4b4b4b;
-    height: 70%;
-  }
-  
-  .footer-info .info-item .flexSmallContainer{
-    display: flex;
-    background-color: #6f6f6f;
-    height: 30%;
-  }
-  
-  .footer-info .info-item .flexSmallContainer .small-item {
-    flex: 1;                /* Cada columna flex ocupa un espacio igual */
-    background-color: #8f8d8d; /* Color de fondo de las columnas */
-    text-align: center;     /* Centra el contenido horizontalmente */
-    margin: 10px;
-    border-radius: 10%;
-  }
-  
-  
-  .a-footer {
-    text-decoration:wavy;
-    color: #000000;
-  }
-  
-  .li-footer {
-    font-size: 12px;
-    color: rgb(0, 0, 0);
-  }
-  /* Estilos para los encabezados h2 */
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  /* Estilos para los párrafos p */
-  p {
-    font-size: 1rem;
-  }
-  
-  /* Estilos para la lista ul */
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  /* Estilos para los elementos de la lista li */
-  li {
-    margin-bottom: 5px;
-  }
-  
-  /* Estilos para los enlaces a */
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  /* Estilos para los enlaces a en hover */
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
-    }
-  }
-  
-  .card {
-    padding: 2em;
-  }
-  
-  .read-the-docs {
-    color: #888;
-  }
-  
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

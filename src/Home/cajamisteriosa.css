@@ -1,20 +1,26 @@
+
+
 .textoo{
-  color: #02111B;
-font-family: Lato;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 40px;
-margin-bottom: 20px;
+  color: var(--text-default, #252525);
+  /* Headlines/L */
+  font-family:  Novatica, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: center;
 }
  
-.text{
-  color: #820A7D;
-font-family: Lato;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px;
+.text-lateral{
+  color:  #820A7D;
+  /* Headlines/XL */
+  font-family: Novatica, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; 
+  display: flex;
+  align-items: center;
 }
 
 .target{
@@ -24,3 +30,11 @@ line-height: 24px;
  
 }
 
+.contenedor-cards {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
