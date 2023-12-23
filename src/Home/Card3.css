@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+
     height: 100%;
 
     padding: 24px;
@@ -28,7 +28,9 @@
     border-radius: 0px;
 }
 
-.btn-secondary {
+.btn-secondario {
+    color: white;
+    font-family: 'Novatica', sans-serif !important;
     display: flex;
     padding: 8px 16px;
     justify-content: center;
@@ -41,13 +43,24 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.btn-secondario:hover {
+    background: #820A7D;
+    border-color: #820A7D;
+    color: white;
+}
+
+.btn-secondario:active {
+    background: var(--ICON-ACTIVE, #025B59);    
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
 
 .imagen-producto {
     width: 100%;
     height: auto;
 }
 
-.titulo {
+.titulo-card {
     margin: 0px;
     color: var(--Titles-Black, #252525);
     /* Headlines/S */
@@ -56,6 +69,24 @@
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
+    text-align: center;
+    width: 358px;
+}
+
+.cuerpo-valoracion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cuerpo-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 #form {
@@ -122,10 +153,10 @@ input[type="radio"]:checked~label {
     text-overflow: ellipsis;
 }
 
-.cuerpo-tarjeta {
+.cuerpo-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 16px;
     width: 100%;

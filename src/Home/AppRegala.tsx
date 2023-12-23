@@ -27,7 +27,7 @@ function AppRegala() {
                         </div>
                         <div>
                             <p className="texto-recuadro">Eleva la experencia culinario con la maridaje de vinos con comida picoteo
-</p>
+                            </p>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@ function AppRegala() {
                         </div>
                         <div>
                             <p className="texto-recuadro">Podrás disfrutar del mundo del vino desde la comodidad de tu casa
-</p>
+                            </p>
                         </div>
                     </div>
 
@@ -47,30 +47,53 @@ function AppRegala() {
                     <h3 className="títulos">Síguenos en Instagram</h3>
                 </div>
 
-                <div className="row publicaciones-ig">
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 244.png" width="270px" alt="" />
+                <div className=" publicaciones-ig">
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 244.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 245.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 245.png" width="270px" alt="" />
+                        </a>
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 246.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 246.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 247.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 247.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 248.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 248.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 249.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 249.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 250.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 250.png" width="270px" alt="" />
+                        </a>
+
                     </div>
-                    <div className="col-4 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 251.png" width="270px" alt="" />
+                    <div className="col-3 frame-ig">
+                        <a href="https://www.instagram.com" target="blank">
+                            <img src="src/Home/imagenes/Rectangle 251.png" width="270px" alt="" />
+                        </a>
+
                     </div>
 
 
@@ -84,7 +107,7 @@ function AppRegala() {
 
 
 
-            
+
         </>
     )
 }

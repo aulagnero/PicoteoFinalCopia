@@ -40,12 +40,14 @@
 }
 
 .publicaciones-ig {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 24px;
 }
 
 .frame-ig {
-    max-width: 260px;
-    justify-content: start;
+    width: 270px;
+    justify-content: center;
 }

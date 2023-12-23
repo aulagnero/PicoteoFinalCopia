@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card3 from './Card3'; // Asegúrate de que esta ruta es correcta
+import Card2 from '../Home/Card2'; // Asegúrate de que esta ruta es correcta
 import { Producto } from './ProductoIndividual.tsx';
 import './ProductCardList.css';
 
@@ -25,7 +25,7 @@ const ProductCardList: React.FC = () => {
       <h2 className='titulo-card-list'>Elevas tu experiencia culinaria maridando tu vino con un snack</h2>
       <div className='container snack-recomendado'>
         {productos.slice(0,4).map((producto) => (
-          <Card3 key={producto.id} producto={producto} />
+          <Card2 key={producto.id} producto={producto} />
         ))}
       </div>
     </div>

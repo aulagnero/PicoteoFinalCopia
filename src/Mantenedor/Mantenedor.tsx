@@ -104,7 +104,7 @@ const FormIngresoProdBS: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="nameInput"
-                  placeholder="Adobe Gran Reserva"
+                  placeholder="Escribe el nombre del producto"
                   name="nombre"
                   onChange={handleChange}
                   value={formData.nombre}
@@ -119,7 +119,7 @@ const FormIngresoProdBS: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="categoryInput"
-                  placeholder="Vino"
+                  placeholder="Escribe la categoría del producto"
                   name="categoria"
                   onChange={handleChange}
                   value={formData.categoria}
@@ -134,7 +134,7 @@ const FormIngresoProdBS: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="descriptionInput"
-                  placeholder="Carmenere orgánico 750cc"
+                  placeholder="Escribe la descripción del producto"
                   name="descripcion"
                   onChange={handleChange}
                   value={formData.descripcion}
@@ -149,7 +149,7 @@ const FormIngresoProdBS: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="priceInput"
-                  placeholder="$ 11111"
+                  placeholder="Escribe el precio del producto"
                   name="precio"
                   onChange={handleChange}
                   value={formData.precio}
