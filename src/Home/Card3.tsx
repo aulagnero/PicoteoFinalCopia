@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Swipe from 'react-swipe';
 import './Card3.css';
 
@@ -39,17 +39,7 @@ function Rating({ value }: { value: number }) {
 
 
 const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
-  const [quantity, setQuantity] = useState(0);
 
-  const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const handleDecrease = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
-  };
 
   const handleAddToCart = () => {
     // Implementar la lógica para agregar al carro de compras
@@ -58,7 +48,7 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
   return (
     <>
-      <div className="card" style={{ width: '200px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="card" style={{ width: '406px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
         <Swipe className="carousel" swipeOptions={{ continuous: true }}>
           {producto.imagen.map((img, index) => (
@@ -70,19 +60,17 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
         <div className="card-body">
           <div className="card-title">
-            <div className="titulo">{producto.nombre}</div>
+            <div className="titulo-card">{producto.nombre}</div>
 
           </div>
 
 
-          <div className='row cuerpo-tarjeta'>
-            <div className="card-text2 col-12 ">$ {producto.precio}</div>
-            <div className='col-12'>
+          <div className='row cuerpo-card'>
+        
+            <div className='col-12 cuerpo-valoracion'>
               <Rating value={producto.valoracion} />
             </div>
-            <div className="card-text desc" style={{ height: '50px' }}>
-              <p>{producto.descripcion}</p>
-            </div>
+      
           </div>
 
 
@@ -92,20 +80,9 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
 
           <div className="row">
-            <div className="col-8">
-              <div className="btn-group">
-                <button className="btn btn-secondary" onClick={handleDecrease}>
-                  -
-                </button>
-                <span className="btn btn-secondary">{quantity}</span>
-                <button className="btn btn-secondary" onClick={handleIncrease}>
-                  +
-                </button>
-              </div>
-            </div>
-            <div className="col-4">
-              <button className="btn btn-secondary" onClick={handleAddToCart}>
-                <img src="src/assets/CARRO 1.svg" alt="carrito" />
+            <div className="col-12 cuerpo-boton">
+              <button className="btn boton-navegacion" style={{width: '108px'}} onClick={handleAddToCart}>
+                ¡Sí, la quiero!
               </button>
             </div>
           </div>

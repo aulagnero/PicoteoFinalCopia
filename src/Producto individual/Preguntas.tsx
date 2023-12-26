@@ -3,7 +3,7 @@ import './Preguntas.css';
 
 const Preguntas = () => {
     return (
-        <div className='container-fluid contenedor-faq'>
+        <div className='container contenedor-faq'>
             <div className="row">
                 <div className="col-12 titulo-faq"> Preguntas Frecuentes </div>
             </div>

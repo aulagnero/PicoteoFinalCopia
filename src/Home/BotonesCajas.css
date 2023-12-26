@@ -1,0 +1,53 @@
+.botonera-seleccion {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 0px;
+}
+
+.boton-seleccion {
+    background-color: transparent;
+    border: none;
+    color: var(--Text-Default, #252525);
+    text-align: center;
+    /* Button/L */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+
+    display: flex;
+    width: 100%;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid var(--Buttons-Black, #000);
+
+}
+
+.boton-seleccion:hover {
+    color: var(--Text-Hover, #820A7D);
+    border-bottom: 3px solid var(--Buttons-Hover, #820A7D);
+
+    
+}
+
+.boton-seleccion:active {
+    color: var(--Text-Active, var(--ICON-ACTIVE, #025B59));
+    border-bottom: 3px solid var(--Buttons-Active, #025B59);
+
+
+}

@@ -5,6 +5,7 @@ import { Producto } from './ProductoIndividual';
 import ProductCardList from './ProductCardList';
 import RedesSociales from './RedesSociales';
 import Preguntas from './Preguntas';
+import BotonesProducto from './BotonesProducto';
 
 function ListaProductos() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -25,6 +26,7 @@ function ListaProductos() {
 
   return (
     <div>
+      <BotonesProducto />
       {producto && <ProductoIndividual product={producto} />}
       {producto && <ProductDetail productId={producto.id.toString()} title={producto.nombre} description={producto.descripcion} price={producto.precio} />}
       <ProductCardList />

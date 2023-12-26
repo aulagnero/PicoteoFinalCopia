@@ -1,6 +1,6 @@
 
 import ListarProductos from "../CRUD/ListarProductos";
-import ListaProductos from "../Productos/Producto individual/ListaProductos";
+import ListaProductos from "../Producto individual/ListaProductos";
 import FormIngresoProdBS from "./Mantenedor";
 import "./Mantenedor.css";
 

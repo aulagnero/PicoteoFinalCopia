@@ -21,7 +21,7 @@ function Footernaciones() {
                             Suscríbete
                         </label>
                         <input type="email" className="form-control" id="emailInput" placeholder="Escribe tu email" />
-                        <button className="btn btn-primary"><Link to="/FormRegistro">Enviar</Link></button>
+                        <button className="btn btn-primary"><Link to="/FormRegistro"></Link>Enviar</button>
                         
                     </form>
 

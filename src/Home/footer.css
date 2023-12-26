@@ -42,7 +42,7 @@
   font-weight: 700;
   line-height: 36px;
   margin-bottom: 10px;
-  
+
 }
 
 .body-footer {
@@ -57,35 +57,57 @@
 }
 
 .btn-primary {
-  width: 240px;
-  height: 48px;
-  border-radius: 8px;
-  background: var(--buttons-default, #007D7B);
-  /* Button Shadow */
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: 'Novatica', sans-serif !important;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
   display: flex;
   padding: 8px 16px;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  align-self: stretch;
-  color: var(--text-white, var(--ICON-WHITE, #F5F5F5));
-  text-align: center;
-  /* Button/L */
-  font-family: Lato, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
+  border-radius: 0px;
+  border-radius: 8px;
+  background: var(--buttons-default, #007D7B);
+  /* Button */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: #820A7D;
+  border-color: #820A7D;
+  color: white;
+}
+
+.btn-primary:active {
+  background: #025B59;
+  /* Button Pressed */
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
 }
 
 .form-suscripcion {
+  color: var(--Text-Default, #252525);
+/* Fields/Input */
+font-family: 'Lato', sans-serif !important; ;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
   width: 265px;
   display: flex;
   flex-direction: column;
 }
 
 .form-control {
+  color: var(--Text-Secondary, #757575);
+  /* Fields/Input Secondary */
+  font-family: 'Lato', sans-serif !important;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
   margin-bottom: 10px;
 }
 
@@ -121,28 +143,7 @@
   justify-content: space-between;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
 
-  /*   text-align: center; */
-  width: 100%;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 /* Estilos para el contenedor del footer */
 .footer-container {

@@ -33,7 +33,7 @@
 
 
 .agregar-carro {
-    color: var(--Text-White, var(--ICON-WHITE, #F5F5F5));
+    color:  #F5F5F5;
     text-align: center;
     /* Button/L */
     font-family: 'Novatica', sans-serif;
@@ -59,6 +59,19 @@
     background: #820A7D;
     border-color: #820A7D;
     color: white;
+}
+
+.agregar-carro:active {
+    display: inline-flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 8px;
+background: var(--ICON-ACTIVE, #025B59);
+/* Button Pressed */
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
 }
 
 .detalles-total {
