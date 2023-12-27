@@ -1,13 +1,17 @@
 import { Llamada } from "./llamadaCard";
 import { useState } from "react";
 import "./cajamisteriosa.css"
-import Card2 from "./Card2";
+import Card from "../Componentes/Card";
 
 
 interface Producto {
-  id: string;
+  valoracion: number;
+  id: number;
   nombre: string;
+  categoria: string;
+  descripcion: string;
   precio: number;
+  imagen: string[];
 }
 
 function AppMes() {
@@ -26,7 +30,7 @@ function AppMes() {
           
           <div className="row gap-5">
             {productos.length > 0 ? (
-              productos.map((prod, index) => <Card2 key={index} producto={prod} />)
+              productos.map((prod, index) => <Card key={index} producto={prod} />)
             ) : (
               <><p>Cargando...</p></>
             )}

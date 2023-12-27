@@ -2,9 +2,13 @@ import { useEffect } from "react";
 
 
 interface Producto {
-  id: string;
+  valoracion: number;
+  id: number;
   nombre: string;
+  categoria: string;
+  descripcion: string;
   precio: number;
+  imagen: string[];
 }
 
 interface LlamadaProps {

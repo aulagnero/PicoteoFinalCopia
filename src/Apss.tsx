@@ -3,7 +3,7 @@ import Menu from "./Home/header";
 import Footernaciones from "./Home/Footer";
 import MainHome from "./Home/Mainhome";
 import Layout from "./Layout";
-import MainCajaMEs from "./Productos/Caja mes/MainCajaMes";
+
 import MainMisterio from "./Productos/Caja Misteriosa/MainMisterio";
 import MainSuscripcion from "./Productos/Suscripcion/MainSuscripcion";
 import NotFound from "./Productos/Error";
@@ -15,6 +15,7 @@ import { FormularioUsuario } from "./Productos/CheckOut/FormularioUsuario";
 import { ProtectedComponent } from "./InicioSesion/ProtectedRoute";
 import LoginJWT from "./InicioSesion/Login2";
 import MainMantenedor from "./Mantenedor/mainMantenedor";
+import PaginaCajas from "./Paginas/PaginaCajas";
 
 
 
@@ -36,7 +37,7 @@ function Apps() {
 
                         <Route path="/" element={<MainHome />} />
                         <Route path="/home" element={<MainHome />} />
-                        <Route path="/productos" element={<MainCajaMEs />} />
+                        <Route path="/productos" element={<PaginaCajas />} />
                         <Route path="/cajamisteriosas" element={<MainMisterio />} />
                         <Route path="/suscripciones" element={<MainSuscripcion />} />
                         <Route path="/checkout" element={<MainCheckOut />} />

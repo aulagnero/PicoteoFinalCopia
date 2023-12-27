@@ -4,9 +4,7 @@ function AppRegala() {
 
     return (
         <>
-            <div className="row">
-                <h3 className="títulos">Síguenos en Instagram</h3>
-            </div>
+
 
             <div className=" publicaciones-ig">
                 <div className="col-3 frame-ig">
