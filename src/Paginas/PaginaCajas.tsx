@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ProductoIndividual from '../Componentes/ProductoIndividual';
+import CajaIndividual from '../Componentes/CajaIndividual';
 import { Producto } from '../Componentes/ProductoIndividual';
 import ProductCardList from '../Componentes/ProductCardList';
 import RedesSociales from '../Producto individual/RedesSociales';
@@ -28,11 +28,14 @@ function PaginaCajas() {
     <div>
       <BotonesProducto />
       <BotonesCajas />
-      {producto && <ProductoIndividual product={producto} />}
+      {producto && <CajaIndividual product={producto} />}
 
       <h2 className='titulo-card-list'>¡Que no te falte nada! Revisa más productos para agregar a tu BOX</h2>
 
       <ProductCardList />
+
+      <h2 className='titulo-card-list'>Unete a nuestra comunidad</h2>
+
       <RedesSociales />
       <Preguntas />
     </div>
