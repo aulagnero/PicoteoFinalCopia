@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Llamada } from "./llamadaCard";
-import Card, { Link } from "../Componentes/Card";
+import Card, { link } from "../Componentes/Card";
 import "./cajamisteriosa.css"
 import Card3 from "../Componentes/Card3";
 
@@ -16,7 +16,7 @@ interface Producto {
 
 function CajaMisteriosa() {
   const [productos, setProductos] = useState<Producto[]>([]);
-  const ENDPOINT: string = Link + "";
+  const ENDPOINT: string = link + "";
 
   return (
     <>

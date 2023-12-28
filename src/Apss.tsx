@@ -16,11 +16,7 @@ import { ProtectedComponent } from "./InicioSesion/ProtectedRoute";
 import LoginJWT from "./InicioSesion/Login2";
 import MainMantenedor from "./Mantenedor/mainMantenedor";
 import PaginaCajas from "./Paginas/PaginaCajas";
-
-
-
-
-
+import DetalleProducto from "./Componentes/DetalleProducto";
 
 function Apps() {
 
@@ -53,9 +49,8 @@ function Apps() {
                                 <MainMantenedor />
                             </ProtectedComponent>
                         } />
-
-
-
+                        <Route path="/detalle-producto/:id" element={<DetalleProducto/>} />
+                        
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>

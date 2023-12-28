@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Swipe from 'react-swipe';
 import './Card.css';
+import { Link } from 'react-router-dom';
 
 
  
 
-export const Link = "http://localhost:3000/products"
+export const link = "http://localhost:3000/products"
 export interface Producto {
   valoracion: number;
   id: number;
@@ -72,10 +73,8 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
         <div className="card-body">
           <div className="card-title">
-            <div className="titulo">{producto.nombre}</div>
-
+          <Link to={`/detalle-producto/${producto.id}`}><div className="titulo">{producto.nombre} </div> </Link>
           </div>
-
 
           <div className='row contenido-tarjeta'>
             <div className="card-text2 col-12 ">$ {producto.precio}</div>
