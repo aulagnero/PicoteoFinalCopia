@@ -64,7 +64,7 @@ function ProductoIndividual({ product }: { product: Producto }) {
               <div className="row">
                 <div className="col-8">
                   <h3> <div className="nombre-producto">{product.nombre}</div></h3>
-                  <Rating value={product.valoracion} />
+                  <div className="descripcion-producto"><Rating value={product.valoracion} /></div>
                 </div>
 
                 <div className="col-4">

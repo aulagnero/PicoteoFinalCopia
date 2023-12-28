@@ -88,11 +88,11 @@ const ListarProductos = () => {
                 <div className="row border-bottom mb-3 ">
                     <div className="col-1 label-datos">ID</div>
                     <div className="col-2 label-datos">Nombre</div>
-                    <div className="col-2 label-datos">Description</div>
-                    <div className="col-1 label-datos">Category</div>
-                    <div className="col-1 label-datos">Price</div>
-                    <div className="col-2 label-datos">Image</div>
-                    <div className="col-3 label-datos">Actions</div>
+                    <div className="col-2 label-datos">Categoría</div>
+                    <div className="col-1 label-datos">Descripción</div>
+                    <div className="col-1 label-datos">Precio</div>
+                    <div className="col-2 label-datos">Imágenes</div>
+                    <div className="col-3 label-datos">Acciones</div>
                 </div>
                 {products.map(product => (
                     <div key={product.id} className="row border-bottom mb-3">
