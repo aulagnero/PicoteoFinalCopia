@@ -61,7 +61,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
                         id="unitPurchase"
                         name="purchaseType"
                         checked={!isSubscription}
-                        onChange={() => setIsSubscription(false)} />
+                        onChange={() => {setIsSubscription(false); setQuantity(0);}} />
                     <label htmlFor="unitPurchase">
                         {!isSubscription ? <RadioChecked /> : <RadioUnchecked />}
                     </label>
@@ -71,11 +71,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
 
                 </div>
                 <div className="col-6 product-actions" >
-                    <div className="btn-group botonera" >  
+                    <div className="btn-group botonera">  
                         <button className="btn btn-secondary" onClick={handleDecrease} disabled={isSubscription} > 
                             -
                         </button>
-                        <span className="btn btn-secondary">{quantity}</span>
+                        <span className="btn btn-secondary" >{quantity} </span>
                         <button className="btn btn-secondary" onClick={handleIncrease} disabled={isSubscription}>
                             +
                         </button>
@@ -83,7 +83,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
 
                     <div className="detalles-total">
                         <div className='detalles-suma'>Total: </div>
-                        <div className='detalles-suma'>${price * quantity}</div>
+                        <div className='detalles-suma'>${!isSubscription ? price * quantity : 0}</div>
                     </div>
 
                 </div>
@@ -96,26 +96,26 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
                     <input type="radio"
                         id="monthlySubscription"
                         name="purchaseType" checked={isSubscription}
-                        onChange={() => setIsSubscription(true)} />
+                        onChange={() => {setIsSubscription(true); setPlan('');}}  />
                     <label htmlFor="monthlySubscription">
                         {isSubscription ? <RadioChecked /> : <RadioUnchecked />}
                     </label>
                     <br />
                     <span className='detalles-titulo'>Suscripción mensual</span>
                 </div>
-                <div className="col-6 product-actions" disabled={!isSubscription}>
+                <div className="col-6 product-actions">
 
-                    <select value={plan} onChange={(e) => setPlan(e.target.value)}>
+                    <select className='seleccion-plan' value={plan} onChange={(e) => setPlan(e.target.value)} disabled={!isSubscription}>
                         <option value="">Selecciona un plan</option>
-                        <option value="3">Plan 3 meses - $80000</option>
-                        <option value="6">Plan 6 meses - $150000</option>
-                        <option value="12">Plan 12 meses - $300000</option>
+                        <option value="3">Plan 3 meses | Entrega mensual</option>
+                        <option value="6">Plan 6 meses | Entrega mensual</option>
+                        <option value="12">Plan 12 meses | Entrega mensual</option>
                     </select>
 
 
                     <div className="detalles-total">
                         <div className='detalles-suma'>Total: </div>
-                        <div className='detalles-suma'>${isSubscription ? getSubscriptionPrice(plan) : price === 0}</div>
+                        <div className='detalles-suma'>${isSubscription ? getSubscriptionPrice(plan) : 0}</div>
                     </div>
                 </div>
             </div>

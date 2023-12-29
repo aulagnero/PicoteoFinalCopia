@@ -1,16 +1,16 @@
 .product-detail {
-    padding: 40px 60px 64px 60px;
+    padding: 40px 60px 20px 60px;
 }
 
 .product-actions {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: end;
 
 }
 
 .product-info {
-  align-items: center;
+    align-items: center;
 }
 
 .compra-unitaria {
@@ -68,7 +68,7 @@
 
 
 .agregar-carro {
-    color:  #F5F5F5;
+    color: #F5F5F5;
     text-align: center;
     /* Button/L */
     font-family: 'Novatica', sans-serif;
@@ -98,19 +98,19 @@
 
 .agregar-carro:active {
     display: inline-flex;
-padding: 8px 16px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 8px;
-background: var(--ICON-ACTIVE, #025B59);
-/* Button Pressed */
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--ICON-ACTIVE, #025B59);
+    /* Button Pressed */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 
 }
 
 .detalles-total {
-    
+
     height: 44px;
     display: flex;
     margin-top: 20px;
@@ -125,13 +125,13 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0
 
 .detalles-suma {
     color: var(--Text-Active, var(--ICON-ACTIVE, #025B59));
-text-align: center;
-/* Headlines/S */
-font-family: 'Novatica', sans-serif;  
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 28px;
+    text-align: center;
+    /* Headlines/S */
+    font-family: 'Novatica', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
 }
 
 .botonera {
@@ -142,10 +142,10 @@ line-height: 28px;
 /* Oculta el botón de radio original */
 input[type='radio'] {
     display: none;
-  }
-  
-  /* Crea un botón de radio personalizado */
-  input[type='radio'] + label {
+}
+
+/* Crea un botón de radio personalizado */
+input[type='radio']+label {
     padding-bottom: 25px;
     height: 20px;
     display: inline-block;
@@ -155,5 +155,34 @@ input[type='radio'] {
     font-size: 13px;
     vertical-align: middle;
     cursor: pointer;
+}
+
+.seleccion-plan {
+    
+    color: var(--Text-Default, #252525);
+    /* Fields/Dropdown */
+    font-family: 'Lato', sans-serif, !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    width: 550px;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 4px;
+    border-radius: 8px;
+    border: 2px solid var(--Buttons-Default, #007D7B);
+    background: var(--Others-Inputs, #FFFFFA);
+    appearance: none; /* Elimina el estilo predeterminado en algunos navegadores */
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en Chrome y Safari */
+    -moz-appearance: none; /* Elimina el estilo predeterminado en Firefox */
+}
+/* Estilo para las opciones del select */
+.seleccion-plan option {
+    font-family: 'Lato', sans-serif, !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
   }
-  

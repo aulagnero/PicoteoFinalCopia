@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IProducto } from "../models/IProducto";
 import "./ProductoIndividual.css";
+import RedesSociales from "./RedesSociales";
 
 const productoInicial: IProducto = {
   id: 0,
@@ -207,13 +208,21 @@ function DetalleProducto() {
             <div className="col-1">
               <div className="perfil-sabor-etiquetas">
                 <span>Gasificado</span>
+                <h1>Hola Mundox</h1>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+<div>
+  <RedesSociales />
+</div>
+
     </>
   );
 }
+
+
 
 export default DetalleProducto;

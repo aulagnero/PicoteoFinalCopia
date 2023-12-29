@@ -29,7 +29,7 @@ function CajaMisteriosa() {
 
 
             {productos.length > 0 ? (
-              productos.slice(0, 1).map((prod, index) => <Card3 key={index} producto={prod} />)
+              productos.slice(8).map((prod, index) => <Card3 key={index} producto={prod} />)
             ) : (
               <p>Cargando...</p>
             )}
@@ -96,7 +96,7 @@ function CajaMisteriosa() {
 
 
             {productos.length > 0 ? (
-              productos.slice(0, 3).map((prod, index) => <Card key={index} producto={prod} />)
+              productos.slice(5,8).map((prod, index) => <Card key={index} producto={prod} />)
             ) : (
               <p>Cargando...</p>
             )}
