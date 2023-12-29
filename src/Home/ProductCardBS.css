@@ -20,7 +20,7 @@
 
     flex-wrap: wrap;
 
-    background: #ffffff;
+    background: var(--Others-Cards, #F9F9F7);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -56,6 +56,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #form {
@@ -96,6 +98,7 @@ input[type="radio"]:checked~label {
 
 .card-title {
     margin-bottom: 20px;
+
 }
 
 .card-text2 {

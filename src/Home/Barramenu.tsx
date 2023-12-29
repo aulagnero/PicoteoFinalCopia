@@ -22,7 +22,9 @@ function Barra2() {
                 </div>
                 <div className="col-2 item-menu">
                     <button className="productoss">
-                        Vinos
+
+                    <Link className="a-menu" to="/cajamisteriosas">Vinos</Link>
+                    
                     </button>
                 </div>
                 <div className="col-2 item-menu">

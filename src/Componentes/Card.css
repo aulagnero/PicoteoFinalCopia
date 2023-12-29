@@ -1,0 +1,142 @@
+.btn-group {
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.card {
+    border-radius: 16px;
+    min-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    padding: 24px;
+    justify-content: space-between;
+    align-content: center;
+
+    flex-wrap: wrap;
+
+    background: var(--Others-Cards, #F9F9F7);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+    border-radius: 0px;
+}
+
+.btn-secondary {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0px;
+    border-radius: 8px;
+    background: var(--buttons-default, #007D7B);
+    /* Button */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.imagen-producto {
+    width: 100%;
+    height: auto;
+}
+
+.titulo {
+    margin: 0px;
+    color: var(--Titles-Black, #252525);
+    /* Headlines/S */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: grey;
+}
+
+.clasificacion {
+
+    unicode-bidi: normal;
+}
+
+label:hover,
+label:hover~label {
+    color: orange;
+}
+
+input[type="radio"]:checked~label {
+    color: orange;
+}
+
+.card-title {
+    margin-bottom: 20px;
+
+}
+
+.card-text2 {
+    color: var(--Text-Hover, #820A7D);
+    /* Headlines/S */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.desc {
+    color: #02111B;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contenido-tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.cuerpo-tarjeta {
+    height:fit-content
+}
+
+.carousel {
+    width: 100%;
+}

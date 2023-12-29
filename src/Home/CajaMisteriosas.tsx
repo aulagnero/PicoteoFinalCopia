@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Llamada } from "./llamadaCard";
-import Card2, { Link } from "./Card2";
+import Card, { link } from "../Componentes/Card";
 import "./cajamisteriosa.css"
-import Card3 from "./Card3";
+import Card3 from "../Componentes/Card3";
 
 interface Producto {
   valoracion: number;
@@ -16,7 +16,7 @@ interface Producto {
 
 function CajaMisteriosa() {
   const [productos, setProductos] = useState<Producto[]>([]);
-  const ENDPOINT: string = Link + "";
+  const ENDPOINT: string = link + "";
 
   return (
     <>
@@ -29,7 +29,7 @@ function CajaMisteriosa() {
 
 
             {productos.length > 0 ? (
-              productos.slice(0, 1).map((prod, index) => <Card3 key={index} producto={prod} />)
+              productos.slice(8).map((prod, index) => <Card3 key={index} producto={prod} />)
             ) : (
               <p>Cargando...</p>
             )}
@@ -96,7 +96,7 @@ function CajaMisteriosa() {
 
 
             {productos.length > 0 ? (
-              productos.slice(0, 3).map((prod, index) => <Card2 key={index} producto={prod} />)
+              productos.slice(5,8).map((prod, index) => <Card key={index} producto={prod} />)
             ) : (
               <p>Cargando...</p>
             )}

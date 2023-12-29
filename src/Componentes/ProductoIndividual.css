@@ -1,0 +1,205 @@
+@font-face {
+    font-family: novatica;
+    src: url(../src/fonts/novatica/Novatica.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: novatica;
+    src: url(../src/fonts/novatica/Novatica-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: novatica;
+    src: url(../src/fonts/novatica/Novatica-Medium.woff);
+    font-weight: 500;
+}
+
+.contenedor-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.imagen-grande {
+    width: auto;
+    height: 365px;
+}
+
+.imagen-pequena {
+    width: 155px;
+    height: 110px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 16px;
+    /* Añade esta línea */
+}
+
+.imagen-pequena img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.imagen-pequena:hover {
+    transform: scale(1.1);
+    /* Añade esta línea */
+}
+
+.thumbnails {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagen-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 365px;
+    height: 365px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.fila-principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.nombre-producto {
+    color: var(--Text-Default, #252525);
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+.precio-producto {
+    color: var(--Text-Default, #820A7D);
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+}
+
+.descripcion-producto {
+    color: var(--Text-Default, #252525);
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 24px;
+}
+
+.texto-numerado {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.detalle-producto {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.perfil-sabor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+    padding: 40px 120px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.perfil-sabor input[type="range"] {
+     -webkit-appearance: none;
+    /* Necesario para Chrome */
+    width: 730px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.perfil-sabor input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Necesario para Chrome */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.perfil-sabor input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.perfil-sabor-etiquetas {
+    color: #000;
+    
+    font-family: 'Lato', sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.descripcion-producto{
+
+    margin-bottom: 24px;
+ 
+}
+
+.valoracion-producto{
+    margin: 24px 0px;
+}
