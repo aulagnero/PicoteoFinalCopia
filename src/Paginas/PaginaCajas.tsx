@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import CajaIndividual from '../Componentes/CajaIndividual';
 import { Producto } from '../Componentes/ProductoIndividual';
 import ProductCardList from '../Componentes/ProductCardList';
-import RedesSociales from '../Producto individual/RedesSociales';
-import Preguntas from '../Producto individual/Preguntas';
+import RedesSociales from '../Componentes/RedesSociales';
+import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
 import BotonesCajas from '../Componentes/BotonesCajas';
+import CajaCardList from '../Componentes/CajaCardList';
+import CajaDetail from '../Componentes/CajaDetail';
 
 function PaginaCajas() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -27,8 +29,17 @@ function PaginaCajas() {
   return (
     <div>
       <BotonesProducto />
+
       <BotonesCajas />
+
       {producto && <CajaIndividual product={producto} />}
+     
+
+      <h2 className='titulo-caja-list'>Productos incluidos</h2>
+
+      <CajaCardList />
+
+      {producto && <CajaDetail productId={producto.id.toString()} title={producto.nombre} price={producto.precio} />}
 
       <h2 className='titulo-card-list'>¡Que no te falte nada! Revisa más productos para agregar a tu BOX</h2>
 

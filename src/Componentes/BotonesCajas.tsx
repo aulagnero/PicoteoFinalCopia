@@ -7,9 +7,9 @@ const BotonesCajas: React.FC = () => {
     }, []);
 
     return (
-        <div className='container'>
+        <div className='container mt-24'>
 
-            <div className='row'>
+            <div className='row mt-24'>
                 <h2 className="textoo"><span >Cajas</span></h2>
             </div>
 

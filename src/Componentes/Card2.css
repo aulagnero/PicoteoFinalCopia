@@ -1,24 +1,20 @@
-.btn-group {
-    background: #ffffff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-}
 
-.card {
+.card-cajas {
     border-radius: 16px;
     min-width: 280px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 384px;
+    height: 248px;
 
     padding: 24px;
     justify-content: space-between;
     align-content: center;
 
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
 
     background: var(--Others-Cards, #F9F9F7);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -28,23 +24,13 @@
     border-radius: 0px;
 }
 
-.btn-secondary {
-    display: flex;
-    padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 0px;
+
+.foto-producto {
+    width: 112px;
+    height: 200px;
     border-radius: 8px;
-    background: var(--buttons-default, #007D7B);
-    /* Button */
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-
-.imagen-producto {
-    width: 100%;
-    height: auto;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .titulo {
@@ -60,40 +46,17 @@
     text-overflow: ellipsis;
 }
 
-#form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
+.titulo-tarjeta{
+    margin: 0px;
 }
 
-#form p {
-    text-align: center;
-}
-
-#form label {
-    font-size: 20px;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-label {
-    color: grey;
-}
-
-.clasificacion {
-
-    unicode-bidi: normal;
-}
-
-label:hover,
-label:hover~label {
-    color: orange;
-}
-
-input[type="radio"]:checked~label {
-    color: orange;
+.cuerpo-tarjeta {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
 }
 
 .card-title {
@@ -129,14 +92,8 @@ input[type="radio"]:checked~label {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
     gap: 16px;
 }
 
-.cuerpo-tarjeta {
-    height:fit-content
-}
 
-.carousel {
-    width: 100%;
-}

@@ -38,8 +38,8 @@ function ProductoIndividual({ product }: { product: Producto }) {
   const [selectedImage, setSelectedImage] = useState(product.imagen[0]);
 
   return (
-    <div className="container mt-4 contenedor-producto">
-      <div className="row mt-40 mb-40">
+    <div className="container contenedor-producto">
+      <div className="row ">
         <div className="col-12 detalle-producto">
 
           <div className="row g-0 ">
@@ -64,7 +64,7 @@ function ProductoIndividual({ product }: { product: Producto }) {
               <div className="row">
                 <div className="col-8">
                   <h3> <div className="nombre-producto">{product.nombre}</div></h3>
-                  <div className="descripcion-producto"><Rating value={product.valoracion} /></div>
+                  <div className="valoracion-producto"><Rating value={product.valoracion} /></div>
                 </div>
 
                 <div className="col-4">
@@ -75,7 +75,7 @@ function ProductoIndividual({ product }: { product: Producto }) {
         
 
 
-                <div className="col-12 texto-numerado">
+                {/* <div className="col-12 texto-numerado">
 
                   <div><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                     <path d="M17.0347 10.3827C17.0347 14.7737 13.2214 18.3333 8.51735 18.3333C3.81335 18.3333 0 14.7737 0 10.3827C0 5.99177 3.81335 2.43219 8.51735 2.43219C13.2214 2.43219 17.0347 5.99177 17.0347 10.3827Z" fill="#007D7B" fill-opacity="0.6" />
@@ -95,7 +95,7 @@ function ProductoIndividual({ product }: { product: Producto }) {
 
                   <div className="col- 10 descripcion-producto">Empezando desde $30,000 incluyendo <br />
                     delivery todos los meses a tu casa </div>
-                </div>
+                </div> */}
 
               </div>
             </div>

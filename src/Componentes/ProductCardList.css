@@ -29,6 +29,17 @@
     padding: 0px;
 }
 
+.titulo-caja-list {
+    color: var(--Titles-Secondary, #590856);
+    /* Headlines/M */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+}
+
 .snack-recomendado {
     display: flex;
     flex-direction: row;

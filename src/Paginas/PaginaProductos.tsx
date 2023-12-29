@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import ProductDetail from './ProductDetail'; // Asegúrate de que esta ruta es correcta
+import ProductDetail from '../Componentes/ProductDetail'; // Asegúrate de que esta ruta es correcta
 import ProductoIndividual from '../Componentes/ProductoIndividual';
 import { Producto } from '../Componentes/ProductoIndividual';
 import ProductCardList from '../Componentes/ProductCardList';
-import RedesSociales from './RedesSociales';
-import Preguntas from './Preguntas';
+import RedesSociales from '../Componentes/RedesSociales';
+import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
 
 function ListaProductos() {
@@ -38,6 +38,7 @@ function ListaProductos() {
 
       <RedesSociales />
       <Preguntas />
+
     </div>
   );
 }

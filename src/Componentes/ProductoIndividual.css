@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 40px 0px;
+
 }
 
 .imagen-grande {
@@ -198,4 +198,8 @@
 
     margin-bottom: 24px;
  
+}
+
+.valoracion-producto{
+    margin: 24px 0px;
 }
