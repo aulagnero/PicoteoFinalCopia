@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
+interface Producto {
+  valoracion: number;
+  id: number;
+  nombre: string;
+  categoria: string;
+  descripcion: string;
+  precio: number;
+  imagen: string[];
+}
+
 interface Filtros {
   categoria: string;
   precio: string;
@@ -8,14 +18,15 @@ interface Filtros {
 }
 
 const CatalogoProductos: React.FC = () => {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState<Producto[]>([]);
   const [filtros, setFiltros] = useState<Filtros>({ categoria: '', precio: '', nombre: '' });
 
   useEffect(() => {
     const params = new URLSearchParams(filtros as unknown as Record<string, string>).toString();
-    fetch(`/api/productos?${params}`)
+    fetch(`http://localhost:3000/products?${params}`)
       .then(response => response.json())
       .then(data => setProductos(data));
+      console.log(productos);
   }, [filtros]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -48,8 +59,8 @@ const CatalogoProductos: React.FC = () => {
           <input type="text" name="nombre" value={filtros.nombre} onChange={handleInputChange} />
         </label>
       </form>
-      {productos.map((producto, index) => (
-        <Card key={index} producto={producto} />
+      {productos.map((producto) => (
+        <Card key={producto.id} producto={producto} />
       ))}
     </div>
   );

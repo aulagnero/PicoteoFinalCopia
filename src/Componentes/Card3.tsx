@@ -1,5 +1,5 @@
 import React from 'react';
-import Swipe from 'react-swipe';
+//import Swipe from 'react-swipe';
 import './Card3.css';
 
 
@@ -50,13 +50,20 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
     <>
       <div className="card" style={{ width: '406px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <Swipe className="carousel" swipeOptions={{ continuous: true }}>
+{/*         <Swipe className="carousel" swipeOptions={{ continuous: true }}>
           {producto.imagen.map((img, index) => (
             <div key={index} style={{ width: '100%' }}>
               <img className='imagen-producto' src={img} alt={`Imagen del producto ${index + 1}`} style={{ width: '100%', display: 'block' }} />
             </div>
           ))}
-        </Swipe>
+        </Swipe> */}
+
+        <div >
+          {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
+          {producto.imagen[0] && (
+            <img className="imagen-producto" src={producto.imagen[0]} alt={producto.descripcion} />
+          )}
+        </div>
 
         <div className="card-body">
           <div className="card-title">

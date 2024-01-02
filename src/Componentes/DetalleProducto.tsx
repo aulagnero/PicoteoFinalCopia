@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IProducto } from "../models/IProducto";
-import "./ProductoIndividual.css";
-import RedesSociales from "./RedesSociales";
+import "./ProductoIndividual.css"
 
 const productoInicial: IProducto = {
   id: 0,
@@ -107,7 +106,7 @@ function DetalleProducto() {
                       {" "}
                       <div className="nombre-producto">{producto.nombre}</div>
                     </h3>
-                    <Rating value={producto.valoracion} />
+                    <div className="valoracion-producto"></div><Rating value={producto.valoracion} /></div>
                   </div>
 
                   <div className="col-4">
@@ -115,9 +114,9 @@ function DetalleProducto() {
                   </div>
 
                   <div className="descripcion-producto">{producto.descripcion}</div>
-                  <div className="descripcion-producto">{producto.categoria}</div>
+                  {/* <div className="descripcion-producto">{producto.categoria}</div> */}
 
-                  <div className="col-12 texto-numerado">
+                  {/* <div className="col-12 texto-numerado">
                     <div>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                         <path
@@ -136,9 +135,9 @@ function DetalleProducto() {
                       Empezando desde $30,000 incluyendo <br />
                       delivery todos los meses a tu casa{" "}
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="col-12 texto-numerado">
+                  {/* <div className="col-12 texto-numerado">
                     <div>
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
                         <path
@@ -157,8 +156,8 @@ function DetalleProducto() {
                       Empezando desde $30,000 incluyendo <br />
                       delivery todos los meses a tu casa{" "}
                     </div>
-                  </div>
-                </div>
+                  </div> 
+                </div>*/}
               </div>
             </div>
           </div>
@@ -208,16 +207,12 @@ function DetalleProducto() {
             <div className="col-1">
               <div className="perfil-sabor-etiquetas">
                 <span>Gasificado</span>
-                <h1>Hola Mundox</h1>
+              
               </div>
             </div>
           </div>
         </div>
       </div>
-
-<div>
-  <RedesSociales />
-</div>
 
     </>
   );

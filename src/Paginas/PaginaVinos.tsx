@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Producto } from '../Componentes/ProductoIndividual';
-import ProductCardList from '../Componentes/ProductCardList';
+//import ProductCardList from '../Componentes/ProductCardList';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
 import CatalogoProductos from '../Componentes/CatalogoProductos';
@@ -27,8 +27,6 @@ function PaginaVinos() {
       <BotonesProducto />
 
       {producto && <CatalogoProductos />}
-
-      <ProductCardList />
 
       <Preguntas />
     </div>

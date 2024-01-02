@@ -8,6 +8,7 @@ import BotonesProducto from '../Componentes/BotonesProducto';
 import BotonesCajas from '../Componentes/BotonesCajas';
 import CajaCardList from '../Componentes/CajaCardList';
 import CajaDetail from '../Componentes/CajaDetail';
+import ProductCommentList from '../Componentes/ProductCommentList';
 
 function PaginaCajas() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -40,6 +41,10 @@ function PaginaCajas() {
       <CajaCardList />
 
       {producto && <CajaDetail productId={producto.id.toString()} title={producto.nombre} price={producto.precio} />}
+
+      <h2 className='titulo-card-list'>Opiniones de la comunidad</h2>
+
+      <ProductCommentList />
 
       <h2 className='titulo-card-list'>¡Que no te falte nada! Revisa más productos para agregar a tu BOX</h2>
 
