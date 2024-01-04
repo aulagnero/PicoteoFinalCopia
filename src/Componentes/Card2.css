@@ -48,6 +48,9 @@
 
 .titulo-tarjeta{
     margin: 0px;
+    max-height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cuerpo-tarjeta {

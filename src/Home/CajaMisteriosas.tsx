@@ -22,14 +22,15 @@ function CajaMisteriosa() {
     <>
       <div className='container '>
 
-       
+
         <div className="row contenedor-cards">
           <div className="col-6 cont-card">
             <Llamada endpoint={ENDPOINT} setData={setProductos} />
 
 
             {productos.length > 0 ? (
-              productos.slice(8).map((prod, index) => <Card3 key={index} producto={prod} />)
+              productos.filter(prod => prod.id === 12).map((prod, index) => <Card3 key={index} producto={prod} />)
+
             ) : (
               <p>Cargando...</p>
             )}
@@ -40,7 +41,7 @@ function CajaMisteriosa() {
             </div>
 
 
-            <div className="col-12 texto-numerado" style={{margin: '0px'}}>
+            <div className="col-12 texto-numerado" style={{ margin: '0px' }}>
 
               <div><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 18 19" fill="none">
                 <path d="M17.0347 10.3827C17.0347 14.7737 13.2214 18.3333 8.51735 18.3333C3.81335 18.3333 0 14.7737 0 10.3827C0 5.99177 3.81335 2.43219 8.51735 2.43219C13.2214 2.43219 17.0347 5.99177 17.0347 10.3827Z" fill="#007D7B" fill-opacity="0.6" />
@@ -60,7 +61,7 @@ function CajaMisteriosa() {
 
 
 
-            <div className="col-12 texto-numerado" style={{margin: '0px'}}>
+            <div className="col-12 texto-numerado" style={{ margin: '0px' }}>
 
               <div><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 18 19" fill="none">
                 <path d="M16.6873 10.7812C16.6873 15.1363 12.9517 18.6667 8.34363 18.6667C3.73557 18.6667 0 15.1363 0 10.7812C0 6.42618 3.73557 2.89572 8.34363 2.89572C12.9517 2.89572 16.6873 6.42618 16.6873 10.7812Z" fill="#007D7B" fill-opacity="0.6" />
@@ -71,12 +72,12 @@ function CajaMisteriosa() {
             </div>
 
             <div className="row">
-            
+
               <div className="col-12">Prueba una vez para compartir con visitas o disfrútala solo</div>
             </div>
 
             <div className="row">
-          
+
               <div className="col-12">Después, vuelve a repetir tu compra cuando quieras o para todos tus eventos </div>
             </div>
 
@@ -94,9 +95,9 @@ function CajaMisteriosa() {
           <div className="row col-10 target">
             <Llamada endpoint={ENDPOINT} setData={setProductos} />
 
-
             {productos.length > 0 ? (
-              productos.slice(5,8).map((prod, index) => <Card key={index} producto={prod} />)
+              productos.filter(producto => [23, 25, 11].includes(producto.id)).map(producto => (
+                <Card key={producto.id} producto={producto} />))
             ) : (
               <p>Cargando...</p>
             )}

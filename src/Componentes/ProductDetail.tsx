@@ -12,7 +12,7 @@ interface ProductDetailProps {
 
 
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ title, description, price, }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({ title, description, price,}) => {
     const [quantity, setQuantity] = useState(0);
 
     const handleIncrease = () => {

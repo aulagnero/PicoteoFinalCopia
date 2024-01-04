@@ -6,6 +6,9 @@ import './ProductCardList.css';
 const ProductCardList: React.FC = () => {
   const [productos, setProductos] = useState<Producto[]>([]);
 
+  const randomProductos = [...productos].sort(() => 0.5 - Math.random()).slice(0, 4);
+
+
   useEffect(() => {
     const obtenerProductos = async () => {
       try {
@@ -21,13 +24,16 @@ const ProductCardList: React.FC = () => {
   }, []);
 
   return (
-      
-      <div className='container snack-recomendado'>
-        {productos.slice(5,9).map((producto) => (
-          <Card key={producto.id} producto={producto} />
-        ))}
-      </div>
-    
+
+    <div className='container snack-recomendado'>
+      {/* {productos.slice(5,9).map((producto) => (
+          <Card key={producto.id} producto={producto} /> */}
+
+      {randomProductos.map(producto => (
+        <Card key={producto.id} producto={producto} />
+      ))}
+    </div>
+
   );
 };
 

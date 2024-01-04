@@ -15,7 +15,7 @@ function ProductCommentList() {
   return (
       
       <div className='container snack-recomendado'>
-        {comentarios.slice(0, 4).map((comentario, index) => (
+        {comentarios.map((comentario, index) => (
         <Card4 key={index} comentario={comentario} />
         ))}
       </div>

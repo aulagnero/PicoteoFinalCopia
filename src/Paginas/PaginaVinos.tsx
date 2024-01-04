@@ -3,7 +3,7 @@ import { Producto } from '../Componentes/ProductoIndividual';
 //import ProductCardList from '../Componentes/ProductCardList';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
-import CatalogoProductos from '../Componentes/CatalogoProductos';
+import CatalogoVinos from '../Componentes/CatalogoVinos';
 
 function PaginaVinos() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -26,7 +26,7 @@ function PaginaVinos() {
     <div>
       <BotonesProducto />
 
-      {producto && <CatalogoProductos />}
+      {producto && <CatalogoVinos />}
 
       <Preguntas />
     </div>
