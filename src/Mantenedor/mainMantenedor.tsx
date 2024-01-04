@@ -1,6 +1,5 @@
 
 import ListarProductos from "../CRUD/ListarProductos";
-import ListaProductos from "../Paginas/PaginaProductos";
 import FormIngresoProdBS from "./Mantenedor";
 import "./Mantenedor.css";
 
@@ -13,14 +12,7 @@ export default function MainMantenedor() {
 
                 <ListarProductos />
 
-                </div>   
-
-            <div>
-                <ListaProductos />
-
-                
-                
-                </div>    
+            </div>
         </div>
     )
 }

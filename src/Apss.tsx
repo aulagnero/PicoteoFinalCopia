@@ -15,8 +15,9 @@ import { ProtectedComponent } from "./InicioSesion/ProtectedRoute";
 import LoginJWT from "./InicioSesion/Login2";
 import MainMantenedor from "./Mantenedor/mainMantenedor";
 import PaginaCajas from "./Paginas/PaginaCajas";
-import DetalleProducto from "./Componentes/DetalleProducto";
+//import DetalleProducto from "./Componentes/DetalleProducto";
 import PaginaVinos from "./Paginas/PaginaVinos";
+import PaginaProductos from "./Paginas/PaginaProductos";
 
 function Apps() {
 
@@ -33,8 +34,8 @@ function Apps() {
 
                         <Route path="/" element={<MainHome />} />
                         <Route path="/home" element={<MainHome />} />
-                        <Route path="/productos" element={<PaginaCajas />} />
-                        <Route path="/cajamisteriosas" element={<PaginaVinos />} />
+                        <Route path="/cajas" element={<PaginaCajas />} />
+                        <Route path="/vinos" element={<PaginaVinos />} />
                         <Route path="/suscripciones" element={<MainSuscripcion />} />
                         <Route path="/checkout" element={<MainCheckOut />} />
                         <Route path="/checkoutdatos" element={<MainChecDatos />} />
@@ -49,7 +50,7 @@ function Apps() {
                                 <MainMantenedor />
                             </ProtectedComponent>
                         } />
-                        <Route path="/detalle-producto/:id" element={<DetalleProducto/>} />
+                        <Route path="/detalle-producto/:id" element={<PaginaProductos />} />
                         
                         <Route path="*" element={<NotFound />} />
                     </Route>

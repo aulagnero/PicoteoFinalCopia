@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import './ProductDetail.css';
+import { Producto } from './Card';
 
 interface ProductDetailProps {
     title: string;
     description: string;
     price: number;
     productId: string;
+    product: Producto;
 }
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ title, description, price }) => {
+
+
+const ProductDetail: React.FC<ProductDetailProps> = ({ title, description, price,}) => {
     const [quantity, setQuantity] = useState(0);
 
     const handleIncrease = () => {

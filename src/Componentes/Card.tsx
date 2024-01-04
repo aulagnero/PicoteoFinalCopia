@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Swipe from 'react-swipe';
+//import Swipe from 'react-swipe';
 import './Card.css';
 import { Link } from 'react-router-dom';
 
 
- 
+
 
 export const link = "http://localhost:3000/products"
 export interface Producto {
@@ -63,17 +63,26 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
     <>
       <div className="card" style={{ width: '200px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <Swipe className="carousel" swipeOptions={{ continuous: true }}>
+        {/*         <Swipe className="carousel" swipeOptions={{ continuous: true }}>
           {producto.imagen.map((img, index) => (
             <div key={index} style={{ width: '100%' }}>
               <img className='imagen-producto' src={img} alt={`Imagen del producto ${index + 1}`} style={{ width: '100%', display: 'block' }} />
             </div>
           ))}
-        </Swipe>
+        </Swipe> */}
+
+        <Link to={`/detalle-producto/${producto.id}`}>
+          <div >
+            {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
+            {producto.imagen[0] && (
+              <img className="imagen-producto" src={producto.imagen[0]} alt={producto.descripcion} />
+            )}
+          </div>
+        </Link>
 
         <div className="card-body">
           <div className="card-title">
-          <Link to={`/detalle-producto/${producto.id}`}><div className="titulo">{producto.nombre} </div> </Link>
+            <Link to={`/detalle-producto/${producto.id}`}><div className="titulo">{producto.nombre} </div> </Link>
           </div>
 
           <div className='row contenido-tarjeta'>

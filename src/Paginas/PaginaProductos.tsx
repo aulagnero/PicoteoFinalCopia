@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import ProductDetail from '../Componentes/ProductDetail'; // Asegúrate de que esta ruta es correcta
-import ProductoIndividual from '../Componentes/ProductoIndividual';
 import { Producto } from '../Componentes/ProductoIndividual';
 import ProductCardList from '../Componentes/ProductCardList';
 import RedesSociales from '../Componentes/RedesSociales';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
+import DetalleProducto from '../Componentes/DetalleProducto';
 
 function ListaProductos() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -27,13 +26,12 @@ function ListaProductos() {
   return (
     <div>
       <BotonesProducto />
-      {producto && <ProductoIndividual product={producto} />}
-      {producto && <ProductDetail productId={producto.id.toString()} title={producto.nombre} description={producto.descripcion} price={producto.precio} />}
-      
+      {producto && <DetalleProducto />}
+
       <h2 className='titulo-card-list'>Elevas tu experiencia culinaria maridando tu vino con un snack</h2>
-      
+
       <ProductCardList />
-      
+
       <h2 className='titulo-card-list'>Súmate a nuestra comunidad</h2>
 
       <RedesSociales />

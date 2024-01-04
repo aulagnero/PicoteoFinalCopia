@@ -3,7 +3,7 @@ import './Card2.css';
 import { Link } from 'react-router-dom';
 
 
- 
+
 
 export const link = "http://localhost:3000/products"
 export interface Producto {
@@ -41,34 +41,34 @@ function Rating({ value }: { value: number }) {
 
 
 const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
-    return (
-      <>
-        <div className="card card-cajas">
-  
+  return (
+    <>
+      <div className="card card-cajas">
+
         <div >
           {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
           {producto.imagen[0] && (
-            <img className="foto-producto" src={producto.imagen[0]} alt={`Imagen del producto 1`}/>
+            <img className="foto-producto" src={producto.imagen[0]} alt={producto.descripcion} />
           )}
-  </div>
-          <div className="card-body cuerpo-tarjeta">
-            <div className="card-title titulo-tarjeta">
+        </div>
+        <div className="card-body cuerpo-tarjeta">
+          <div className="card-title titulo-tarjeta">
             <Link to={`/detalle-producto/${producto.id}`}><div className="titulo">{producto.nombre} </div> </Link>
+          </div>
+
+          <div className='row contenido-tarjeta'>
+
+            <div className='col-12'>
+              <Rating value={producto.valoracion} />
             </div>
-  
-            <div className='row contenido-tarjeta'>
-              
-              <div className='col-12'>
-                <Rating value={producto.valoracion} />
-              </div>
-              <div className="card-text desc" style={{ height: '50px' }}>
-                <p>{producto.descripcion}</p>
-              </div>
+            <div className="card-text desc" style={{ height: '50px' }}>
+              <p>{producto.descripcion}</p>
             </div>
           </div>
         </div>
-      </>
-    );
-  };
+      </div>
+    </>
+  );
+};
 
 export default Card2;

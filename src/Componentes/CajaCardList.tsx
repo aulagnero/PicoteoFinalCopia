@@ -21,13 +21,15 @@ const ProductCardList: React.FC = () => {
   }, []);
 
   return (
+
+    <div className='container snack-recomendado'>
+
+      {productos.filter(producto => [23, 25, 11].includes(producto.id)).map(producto => (
+        <Card2 key={producto.id} producto={producto} />
+      ))}
       
-      <div className='container snack-recomendado'>
-        {productos.slice(5,8).map((producto) => (
-          <Card2 key={producto.id} producto={producto} />
-        ))}
-      </div>
-    
+    </div>
+
   );
 };
 

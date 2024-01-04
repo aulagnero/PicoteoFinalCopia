@@ -1,0 +1,42 @@
+.card-opiniones {
+    display: flex;
+    width: 272px;
+    padding: 32px;
+    align-items: center;
+    align-content: center;
+    gap: 16px 24px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    background: var(--Others-Cards, #F9F9F7);
+    /* Regular Shadow */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+.cuerpo-opiniones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.thumbnail-producto {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 52px;
+}
+
+.titulo-opinion {
+    margin: 0px 5px;
+    color: var(--Titles-Black, #252525);
+    /* Headlines/S */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}

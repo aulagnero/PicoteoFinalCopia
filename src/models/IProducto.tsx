@@ -6,4 +6,5 @@ export interface IProducto {
     descripcion: string;
     precio: number;
     imagen: string[];
+   
   }
