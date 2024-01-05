@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProductDetail.css';
-import { Producto } from './Card';
+import { Producto } from './CardProduct';
 
 interface ProductDetailProps {
     title: string;

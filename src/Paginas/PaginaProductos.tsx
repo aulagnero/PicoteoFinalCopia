@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Producto } from '../Componentes/ProductoIndividual';
 import ProductCardList from '../Componentes/ProductCardList';
-import RedesSociales from '../Componentes/RedesSociales';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
 import DetalleProducto from '../Componentes/DetalleProducto';
+import RedesSociales from '../Componentes/RedesSociales';
 
 function ListaProductos() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -35,6 +35,7 @@ function ListaProductos() {
       <h2 className='titulo-card-list'>Súmate a nuestra comunidad</h2>
 
       <RedesSociales />
+
       <Preguntas />
 
     </div>

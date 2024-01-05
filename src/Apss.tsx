@@ -18,6 +18,8 @@ import PaginaCajas from "./Paginas/PaginaCajas";
 //import DetalleProducto from "./Componentes/DetalleProducto";
 import PaginaVinos from "./Paginas/PaginaVinos";
 import PaginaProductos from "./Paginas/PaginaProductos";
+import Carro from "./Carrito2/Carro";
+
 
 function Apps() {
 
@@ -43,6 +45,7 @@ function Apps() {
                         <Route path="/checkoutPagoExito" element={<MainChecPagoExito />} />
                         <Route path="/FormRegistro" element={<FormularioUsuario />} />
                         <Route path="/mantenedor" element={<MainMantenedor />} />
+                        <Route path="/carrito" element={<Carro />} />
                         <Route path="/login" element={<LoginJWT />} />
 
                         <Route path="/protected" element={
