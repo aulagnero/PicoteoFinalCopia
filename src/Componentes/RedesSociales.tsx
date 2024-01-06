@@ -1,6 +1,6 @@
 import "./RedesSociales.css"
 
-function AppRegala() {
+function AppRedesSociales() {
 
     return (
         <>
@@ -8,16 +8,16 @@ function AppRegala() {
 
             <div className=" publicaciones-ig">
                 <div className="col-3 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 252.png" width="270px" alt="" />
+                    <img src="src/Home/imagenes/Rectangle-252.png" width="270px" alt="" />
                 </div>
                 <div className="col-3 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 253.png" width="270px" alt="" />
+                    <img src="src/Home/imagenes/Rectangle-253.png" width="270px" alt="" />
                 </div>
                 <div className="col-3 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 254.png" width="270px" alt="" />
+                    <img src="src/Home/imagenes/Rectangle-254.png" width="270px" alt="" />
                 </div>
                 <div className="col-3 frame-ig">
-                    <img src="src/Home/imagenes/Rectangle 255.png" width="270px" alt="" />
+                    <img src="src/Home/imagenes/Rectangle-255.png" width="270px" alt="" />
                 </div>
             
             </div>
@@ -26,4 +26,4 @@ function AppRegala() {
     )
 }
 
-export default AppRegala
+export default AppRedesSociales

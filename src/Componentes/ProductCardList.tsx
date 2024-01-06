@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../Componentes/Card.tsx'; // Asegúrate de que esta ruta es correcta
+import Card from './CardProduct.tsx'; // Asegúrate de que esta ruta es correcta
 import { Producto } from './ProductoIndividual.tsx';
 import './ProductCardList.css';
 

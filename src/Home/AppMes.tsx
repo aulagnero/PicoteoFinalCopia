@@ -1,7 +1,7 @@
 import { Llamada } from "./llamadaCard";
 import { useState } from "react";
 import "./cajamisteriosa.css"
-import Card from "../Componentes/Card";
+import Card from "../Componentes/CardProduct";
 
 
 interface Producto {

@@ -1,4 +1,4 @@
-import './Card4.css';
+import './CardComment.css';
 
 export interface Comentario {
   id: number;

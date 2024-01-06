@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Llamada } from "./llamadaCard";
-import Card, { link } from "../Componentes/Card";
+import Card, { link } from "../Componentes/CardProduct";
 import "./cajamisteriosa.css"
-import Card3 from "../Componentes/Card3";
+import Card3 from "../Componentes/CardCaja";
 
 interface Producto {
   valoracion: number;

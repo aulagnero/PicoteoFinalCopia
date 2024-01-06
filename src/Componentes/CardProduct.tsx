@@ -1,6 +1,9 @@
-import React from 'react';
-import './Card2.css';
+import React, { useState } from 'react';
+//import Swipe from 'react-swipe';
+import './Card.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { agregarProducto } from '../redux2/carroSlice';
 
 
 
@@ -41,23 +44,62 @@ function Rating({ value }: { value: number }) {
 
 
 const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
+  const [quantity, setQuantity] = useState(0);
+
+
+  const dispatch = useDispatch();
+
+
+
+  const addProducto = () => {
+    for (let i = 0; i < quantity; i++) {
+      dispatch(agregarProducto(producto));
+    }
+    setQuantity(0); // resetear la cantidad después de agregar al carro
+  };
+
+
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrease = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+
+
+
   return (
     <>
-      <div className="card card-cajas">
+      <div className="card" style={{ width: '200px', padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <div >
-          {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
-          {producto.imagen[0] && (
-            <img className="foto-producto" src={producto.imagen[0]} alt={producto.descripcion} />
-          )}
-        </div>
-        <div className="card-body cuerpo-tarjeta">
-          <div className="card-title titulo-tarjeta">
+        {/*         <Swipe className="carousel" swipeOptions={{ continuous: true }}>
+          {producto.imagen.map((img, index) => (
+            <div key={index} style={{ width: '100%' }}>
+              <img className='imagen-producto' src={img} alt={`Imagen del producto ${index + 1}`} style={{ width: '100%', display: 'block' }} />
+            </div>
+          ))}
+        </Swipe> */}
+
+        <Link to={`/detalle-producto/${producto.id}`}>
+          <div >
+            {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
+            {producto.imagen[0] && (
+              <img className="imagen-producto" src={producto.imagen[0]} alt={producto.descripcion} />
+            )}
+          </div>
+        </Link>
+
+        <div className="card-body">
+          <div className="card-title">
             <Link to={`/detalle-producto/${producto.id}`}><div className="titulo">{producto.nombre} </div> </Link>
           </div>
 
           <div className='row contenido-tarjeta'>
-
+            <div className="card-text2 col-12 ">$ {producto.precio}</div>
             <div className='col-12'>
               <Rating value={producto.valoracion} />
             </div>
@@ -65,7 +107,33 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
               <p>{producto.descripcion}</p>
             </div>
           </div>
+
+
+
+          <br />
+
+
+
+          <div className="row">
+            <div className="col-8">
+              <div className="btn-group">
+                <button className="btn btn-secondary" onClick={handleDecrease} >
+                  -
+                </button>
+                <span className="btn btn-secondary">{quantity}</span>
+                <button className="btn btn-secondary" onClick={handleIncrease}>
+                  +
+                </button>
+              </div>
+            </div>
+            <div className="col-4">
+              <button className="btn btn-secondary" onClick={addProducto} disabled={quantity <= 0}>
+                <img src="src/assets/CARRO 1.svg" alt="carrito" />
+              </button> 
+            </div>
+          </div>
         </div>
+
       </div>
     </>
   );

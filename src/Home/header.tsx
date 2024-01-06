@@ -35,7 +35,7 @@ function Menu() {
                     </div>
                     <div className="col-1 conten3">
 
-                        <Link to="/mantenedor"><img src="src/Home/imagenes/shopping-cart.svg" alt="carrito de compras"/></Link>
+                        <Link to="/carrito"><img src="src/Home/imagenes/shopping-cart.svg" alt="carrito de compras"/></Link>
 
 
                         {/* <img className="logousuario" src={imgcarro} alt="" /> */}

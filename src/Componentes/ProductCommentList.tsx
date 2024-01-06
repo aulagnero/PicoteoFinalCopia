@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card4, { Comentario } from '../Componentes/Card4.tsx'; // Asegúrate de que esta ruta es correcta
+import Card4, { Comentario } from './CardComment.tsx'; // Asegúrate de que esta ruta es correcta
 import './ProductCardList.css';
 
 function ProductCommentList() {

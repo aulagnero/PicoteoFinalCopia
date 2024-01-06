@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../Componentes/Card';
+import Card from './CardProduct';
 import './CatalogoVinos.css';
 
 interface Producto {

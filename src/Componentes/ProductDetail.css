@@ -110,14 +110,13 @@
 }
 
 .detalles-total {
-
+    min-width: 200px;
     height: 44px;
     display: flex;
     margin-top: 20px;
     padding: 8px 16px;
     justify-content: space-between;
-    align-items: flex-end;
-    align-self: stretch;
+
     border-radius: 8px;
     border: 2px solid var(--Buttons-Default, #007D7B);
 
@@ -158,7 +157,7 @@ input[type='radio']+label {
 }
 
 .seleccion-plan {
-    
+
     color: var(--Text-Default, #252525);
     /* Fields/Dropdown */
     font-family: 'Lato', sans-serif, !important;
@@ -174,10 +173,14 @@ input[type='radio']+label {
     border-radius: 8px;
     border: 2px solid var(--Buttons-Default, #007D7B);
     background: var(--Others-Inputs, #FFFFFA);
-    appearance: none; /* Elimina el estilo predeterminado en algunos navegadores */
-    -webkit-appearance: none; /* Elimina el estilo predeterminado en Chrome y Safari */
-    -moz-appearance: none; /* Elimina el estilo predeterminado en Firefox */
+    appearance: none;
+    /* Elimina el estilo predeterminado en algunos navegadores */
+    -webkit-appearance: none;
+    /* Elimina el estilo predeterminado en Chrome y Safari */
+    -moz-appearance: none;
+    /* Elimina el estilo predeterminado en Firefox */
 }
+
 /* Estilo para las opciones del select */
 .seleccion-plan option {
     font-family: 'Lato', sans-serif, !important;
@@ -185,4 +188,4 @@ input[type='radio']+label {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-  }
+}
