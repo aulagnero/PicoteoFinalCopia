@@ -11,12 +11,12 @@ interface Region {
 }
 
 const Bodycheckout2 = () => {
-    const validarRut = (rut) => validate(rut);
+    const validarRut = (rut: string) => validate(rut);
 
     const basicSchema = yup.object().shape({
         name: yup.string().required('Este campo es requerido'),
         email: yup.string().email('Este campo debe ser un email válido').required('Este campo es requerido'),
-        rut: yup.string().test('rut-invalido', 'Rut inválido', validarRut),
+        rut: yup.string().test('rut-invalido', 'Rut inválido', (rut) => rut ? validarRut(rut) : true),
         direccion: yup.string().required('Este campo es requerido'),
         referencia: yup.string().required('Este campo es requerido'),
         region: yup.string().required('Este campo es requerido'),

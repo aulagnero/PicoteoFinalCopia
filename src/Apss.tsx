@@ -4,7 +4,6 @@ import Footernaciones from "./Home/Footer";
 import MainHome from "./Home/Mainhome";
 import Layout from "./Layout";
 
-import MainSuscripcion from "./Productos/Suscripcion/MainSuscripcion";
 import NotFound from "./Productos/Error";
 import MainCheckOut from "./Productos/CheckOut/MainCheckOut";
 import MainChecDatos from "./Productos/CheckOut/MaincheckoutDatos";
@@ -19,6 +18,7 @@ import PaginaCajas from "./Paginas/PaginaCajas";
 import PaginaVinos from "./Paginas/PaginaVinos";
 import PaginaProductos from "./Paginas/PaginaProductos";
 import Carro from "./Carrito2/Carro";
+import PaginaSnacks from "./Paginas/PaginaSnacks";
 
 
 function Apps() {
@@ -38,7 +38,7 @@ function Apps() {
                         <Route path="/home" element={<MainHome />} />
                         <Route path="/cajas" element={<PaginaCajas />} />
                         <Route path="/vinos" element={<PaginaVinos />} />
-                        <Route path="/suscripciones" element={<MainSuscripcion />} />
+                        <Route path="/suscripciones" element={<PaginaSnacks />} />
                         <Route path="/checkout" element={<MainCheckOut />} />
                         <Route path="/checkoutdatos" element={<MainChecDatos />} />
                         <Route path="/checkoutPago" element={<MainChecPago />} />

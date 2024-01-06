@@ -1,0 +1,80 @@
+.carro-compras {
+ 
+  width: 1440px;
+
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px 32px;
+  flex-wrap: wrap;
+}
+
+.alerta-carrito {
+  position: relative;
+  display: inline-block;
+}
+
+.alerta {
+  position: absolute;
+  top: -25px;
+  right: -47px;
+  background-color: #820A7D;
+  color: white;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  text-align: center;
+  line-height: 27px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif !important;
+  font-weight: bold;
+}
+
+.resumen-carro {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: var(--Others-Cards, #F9F9F7);
+  /* Small Shadow */
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+.resumen-total {
+  color: #000;
+text-align: start;
+/* Headlines/M */
+font-family: 'Novatica', sans-serif !important;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+}
+
+.resumen-envio {
+  color: #000;
+text-align: start;
+/* Headlines/M MEDIUM */
+font-family: 'Novatica', sans-serif !important;
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px
+}
+
+.resumen-pago {
+  display: flex;
+align-items: flex-start;
+justify-content: space-between;
+width: 100%;
+flex-wrap: nowrap;
+
+}
+
+.contenedor-totales {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+  width: 500px;
+}

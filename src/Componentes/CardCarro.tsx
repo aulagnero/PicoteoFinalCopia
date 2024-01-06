@@ -49,27 +49,14 @@ function Rating({ value }: { value: number }) {
 }
 
 
-const CardCarro: React.FC<CardCarroProps> = ({ producto, onDelete }) => {
-    const [quantity, setQuantity] = useState(0);
+const CardCarro: React.FC<CardCarroProps> = ({ producto, quantity: initialQuantity, onDelete }) => {
+    const [quantity, setQuantity] = useState(initialQuantity);
     const dispatch = useDispatch();
 
     const handleDelete = () => {
         dispatch(eliminarProducto(producto.id));
         onDelete(producto.id);
     };
-
-    /*     const addProducto = (event:any) => {
-            event.preventDefault();
-    
-            dispatch(agregarProducto({
-              id: producto.id, nombre: producto.nombre, precio: producto.precio, descripcion: producto.descripcion, imagen: producto.imagen,
-              valoracion: producto.valoracion,
-              categoria: producto.categoria,
-            }))
-    
-            console.log('agregando producto', document);
-        } */
-
 
     const handleIncrease = () => {
         setQuantity(quantity + 1);
@@ -116,6 +103,7 @@ const CardCarro: React.FC<CardCarroProps> = ({ producto, onDelete }) => {
 
 
                     <div className="col-8 detalles-actions">
+                   
                         <div className="btn-group">
                             <button className="btn btn-secondary" onClick={handleDecrease}>
                                 -
