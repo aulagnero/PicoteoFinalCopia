@@ -15,7 +15,7 @@ function Carro() {
         <div className='container'>
         <div className='row'>
         {productos.map((producto: any) => (
-        <CardCarro key={producto.id} producto={producto} onDelete={deleteProducto} quantity={0} />
+        <CardCarro key={producto.id} producto={producto} onDelete={deleteProducto} quantity={producto.cantidad} />
       ))}
             </div>
             <br />

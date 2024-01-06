@@ -5,14 +5,14 @@
     min-width: 280px;
 
     display: flex;
-    flex-direction: row;
+
     align-items: center;
     width: 384px;
     height: 248px;
 
     padding: 24px;
     justify-content: space-between;
-    align-content: center;
+    align-content: space-between;
 
     flex-wrap: no-wrap;
 
@@ -59,7 +59,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 24px;
+    padding: 0px;
 }
 
 .card-title {

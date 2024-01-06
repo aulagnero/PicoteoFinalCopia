@@ -12,10 +12,12 @@
     margin-bottom: 32px;
 }
 
-.foto-producto {
+.foto-productos {
     width: 168px;
     height: 200px;
     border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .card-details {

@@ -90,7 +90,7 @@ const CardCarro: React.FC<CardCarroProps> = ({ producto, onDelete }) => {
                 <div className='cont-foto'>
                     {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}
                     {producto.imagen[0] && (
-                        <img className="foto-producto" src={producto.imagen[0]} alt={producto.descripcion} />
+                        <img className="foto-productos" src={producto.imagen[0]} alt={producto.descripcion} />
                     )}
                 </div>
 
