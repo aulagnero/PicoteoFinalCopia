@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './BotonesProducto.css';
+import { Link } from 'react-router-dom';
 
 const BotonesProducto: React.FC = () => {
     useEffect(() => {
@@ -10,15 +11,15 @@ const BotonesProducto: React.FC = () => {
         <div className='container'>
             <div className="row botonera-navegacion">
                 <div className="col-4 contenedor-boton">
-                <button className="boton-navegacion" onClick={() => console.log('Cajas')}>Cajas</button>
+                <button className="boton-navegacion" ><Link to="/cajas">Cajas</Link></button>
                 </div>
 
-                <div className="col-4 contenedor-boton">
-                <button className="boton-navegacion" onClick={() => console.log('Vinos')}>Vinos</button>
+                 <div className="col-4 contenedor-boton">
+                  <button className="boton-navegacion"> <Link to="/vinos"> Vinos </Link></button>
                 </div>
-
+                
                 <div className="col-4 contenedor-boton">
-                <button className="boton-navegacion" onClick={() => console.log('Snacks')}>Snacks</button>
+                <button className="boton-navegacion" >Snacks</button>
                 </div>
             
             </div>

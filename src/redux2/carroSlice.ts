@@ -18,17 +18,37 @@ export const carroSlice = createSlice({
     reducers: {
         agregarProducto: (state, action:PayloadAction<Producto>) =>  {
             const producto = action.payload;
-            state.productos.push(producto);//Añadimos el producto al arreglo de productos (carro).
-            state.precioTotal = Number(state.precioTotal) + Number(producto.precio);//Sumamos el precio del producto a nuestro precio total del carro.
+            const productoExistente = state.productos.find((p) => p.id === producto.id);
+        
+            if (productoExistente) {
+                // Si el producto ya existe en el carrito, incrementamos la cantidad
+                if (typeof productoExistente.cantidad === 'number') {
+                    productoExistente.cantidad += 1;
+                } else {
+                    productoExistente.cantidad = 1;
+                }
+            } else {
+                // Si el producto no existe en el carrito, lo añadimos con cantidad 1
+                state.productos.push({ ...producto, cantidad: 1 });
+            }
+        
+            state.precioTotal = Number(state.precioTotal) + Number(producto.precio);
         },
         eliminarProducto: (state, action) => {
             const id = action.payload;
             const posicion = state.productos.findIndex((producto:Producto) => producto.id === id);
-
+        
             if(posicion > -1){
-                const obj = state.productos[posicion];//Buscamos el objeto producto segun la posicion del array productos.
-                state.precioTotal = Number(state.precioTotal) - Number(obj.precio); //Restamos el precio del producto a nuestro precio total del carro.
-                state.productos.splice(posicion,1);//Eliminamos el producto del array de productos (carro).
+                const obj = state.productos[posicion];
+                state.precioTotal = Number(state.precioTotal) - Number(obj.precio);
+        
+                if (obj.cantidad && obj.cantidad > 1) {
+                    // Si la cantidad del producto es mayor a 1, disminuimos la cantidad
+                    obj.cantidad -= 1;
+                } else {
+                    // Si la cantidad del producto es 1, eliminamos el producto del carrito
+                    state.productos.splice(posicion,1);
+                }
             }
         }
     }

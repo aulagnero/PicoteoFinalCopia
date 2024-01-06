@@ -4,9 +4,11 @@ import "./header.css"
 import "./barra.css"
 import { Link } from 'react-router-dom';
 import LogoPagina from "./Logo-viña-picoteo.svg"
+import { useSelector } from 'react-redux';
 
 
 function Menu() {
+    const productos = useSelector((state: any) => state.carroReducers.productos);
 
     return (
         <>
@@ -34,6 +36,13 @@ function Menu() {
                         </Link>
                     </div>
                     <div className="col-1 conten3">
+                    <div className="alerta-carrito">
+                        {productos.length > 0 && (
+                            <div className="alerta">
+                                {productos.length}
+                            </div>
+                        )}
+                    </div>
 
                         <Link to="/carrito"><img src="src/Home/imagenes/shopping-cart.svg" alt="carrito de compras"/></Link>
 
