@@ -3,7 +3,8 @@ import { eliminarProducto } from "../redux2/carroSlice";
 import CardCarro from '../Componentes/CardCarro';
 import "./Carro.css"
 import { Link } from 'react-router-dom';
-import CardResumen from '../Componentes/CardResumen';
+import ResumenCompra from '../Componentes/ResumenCompra';
+
 
 function Carro() {
     const dispatch = useDispatch();
@@ -26,7 +27,9 @@ function Carro() {
                         <CardCarro key={producto.id} producto={producto} onDelete={deleteProducto} quantity={producto.cantidad} />
                     ))}
                 </div>
-                <div className="col-5 resumen-carro">
+                <ResumenCompra productos={productos} precioTotal={precioTotal} />
+                
+                {/* <div className="col-5 resumen-carro">
                     <h3 className='textoo'>Resumen de compra</h3>
                     {productos.map((producto: any) => (
                         <CardResumen key={producto.id} productoId={producto.id} quantity={producto.cantidad} />
@@ -44,7 +47,7 @@ function Carro() {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
             </div>
             <br />
             <br />
@@ -52,7 +55,7 @@ function Carro() {
 
             <div>
 
-                <Link to="/resumen-compra" className="btn btn-primary">Ir a pagar</Link>
+                <Link to="/usuario" className="btn btn-primary">Confirmar carro de compras</Link>
             </div>
         </div>
     );

@@ -5,7 +5,7 @@ import MainHome from "./Home/Mainhome";
 import Layout from "./Layout";
 
 import NotFound from "./Productos/Error";
-import MainCheckOut from "./Productos/CheckOut/MainCheckOut";
+//import MainCheckOut from "./Productos/CheckOut/MainCheckOut";
 import MainChecDatos from "./Productos/CheckOut/MaincheckoutDatos";
 import MainChecPago from "./Productos/CheckOut/MainCheckourPagar";
 import MainChecPagoExito from "./Productos/CheckOut/BodyExitoPago"
@@ -17,8 +17,11 @@ import PaginaCajas from "./Paginas/PaginaCajas";
 //import DetalleProducto from "./Componentes/DetalleProducto";
 import PaginaVinos from "./Paginas/PaginaVinos";
 import PaginaProductos from "./Paginas/PaginaProductos";
-import Carro from "./Carrito2/Carro";
 import PaginaSnacks from "./Paginas/PaginaSnacks";
+import PaginaCarro from "./Paginas/PaginaCarro";
+import PaginaUsuario from "./Paginas/PaginaUsuario";
+import PaginaLogin from "./Paginas/PaginaLogin";
+import PaginaRegistro from "./Paginas/PaginaRegistro";
 
 
 function Apps() {
@@ -38,15 +41,18 @@ function Apps() {
                         <Route path="/home" element={<MainHome />} />
                         <Route path="/cajas" element={<PaginaCajas />} />
                         <Route path="/vinos" element={<PaginaVinos />} />
-                        <Route path="/suscripciones" element={<PaginaSnacks />} />
-                        <Route path="/checkout" element={<MainCheckOut />} />
                         <Route path="/checkoutdatos" element={<MainChecDatos />} />
                         <Route path="/checkoutPago" element={<MainChecPago />} />
                         <Route path="/checkoutPagoExito" element={<MainChecPagoExito />} />
                         <Route path="/FormRegistro" element={<FormularioUsuario />} />
                         <Route path="/mantenedor" element={<MainMantenedor />} />
-                        <Route path="/carrito" element={<Carro />} />
+                        <Route path="/carrito" element={<PaginaCarro />} />
                         <Route path="/login" element={<LoginJWT />} />
+                        <Route path="/snacks" element={<PaginaSnacks />} />
+
+                        <Route path="/registro" element={<PaginaRegistro />} />
+                        <Route path="/invitado" element={<PaginaUsuario />} />
+                        <Route path="/usuario" element={<PaginaLogin />} />
 
                         <Route path="/protected" element={
                             <ProtectedComponent allowedRoles={["admin", "admin-search", "user-search"]}>

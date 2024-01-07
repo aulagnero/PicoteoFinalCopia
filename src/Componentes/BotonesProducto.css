@@ -1,7 +1,7 @@
 .botonera-navegacion {
     display: flex;
     flex-direction: row;
-    padding: 24px 0px;
+    padding: 24px 0px 48px 0px;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@
 .boton-navegacion {
     color: var(--Text-White, var(--ICON-WHITE, #F5F5F5));
     text-align: center;
-
+width: 400px;
     font-family: 'Novatica', sans-serif;
     font-size: 24px;
     font-style: normal;

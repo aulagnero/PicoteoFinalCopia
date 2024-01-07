@@ -11,15 +11,21 @@ const BotonesProducto: React.FC = () => {
         <div className='container'>
             <div className="row botonera-navegacion">
                 <div className="col-4 contenedor-boton">
-                <button className="boton-navegacion" ><Link to="/cajas">Cajas</Link></button>
+                <Link to="/cajas">
+                <button className="boton-navegacion" >Cajas</button>
+                </Link>
                 </div>
 
                  <div className="col-4 contenedor-boton">
-                  <button className="boton-navegacion"> <Link to="/vinos"> Vinos </Link></button>
+                 <Link to="/vinos">
+                  <button className="boton-navegacion">  Vinos </button>
+                  </Link>
                 </div>
                 
                 <div className="col-4 contenedor-boton">
+                <Link to="/snacks">
                 <button className="boton-navegacion" >Snacks</button>
+                </Link>
                 </div>
             
             </div>
