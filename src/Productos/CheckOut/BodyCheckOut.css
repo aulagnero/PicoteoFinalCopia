@@ -462,27 +462,7 @@
     line-height: 20px;
     text-align: left;
 }
-#commune {
-    color: #848484;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    border-radius: 12px;
-    background: #F8F5F5;
-    border: 0px solid F8F5F5;
 
-    display: flex;
-    flex-direction: row;
-    width: 380px;
-    height: 48px;
-    padding: 0px 24px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
 
 .campo-select {
     display: flex;

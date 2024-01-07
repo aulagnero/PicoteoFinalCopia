@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { Md5 } from 'ts-md5';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import LOGO from  "../Home/imagenes/logo-naciones.png"
-import { RootState } from "../Redux/store";
-import { login, logout } from "../Redux/userSlice";
+import LOGO from "../Home/imagenes/logo-naciones.png"
+import { RootState } from "../redux/store";
+import { login, logout } from "../redux/userSlice";
 import { jwtDecode } from 'jwt-decode';
 import "./login.css"
 import { Link } from "../Home/Card2";
@@ -49,7 +49,7 @@ export const LoginJWT = () => {
         event.preventDefault();
         const passwordEncriptado = Md5.hashStr(form.password);
 
-        fetch( `${Link}/auth/login`, { 
+        fetch(`${Link}/auth/login`, {
             method: 'POST',
             body: JSON.stringify({
                 "email": form.username,
@@ -88,49 +88,73 @@ export const LoginJWT = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container contenedor-body-checkout">
             {!user?.isAuth &&
-                <div className="container col-5">
-                    <div className="card mt-5">
-                        <div className="card-body">
-                            <div className="text-center mb-2">
-                                <img src={LOGO} alt="Logo" className="mb-3 logoooo" />
-                                <h2 className="card-title">Iniciar sesion</h2>
-                            </div>
-                            <form onSubmit={handleSubmit} className="mt-4">
-                                <div className="form-group">
-                                    <label>
-                                        <p>Username</p>
-                                        <input type="text" name="username" value={form.username} onChange={handleChange} className="form-control" />
-                                    </label>
-                                </div>
-                                <div className="form-group">
-                                    <label>
-                                        <p>Password</p>
-                                        <input type="password" name="password" value={form.password} onChange={handleChange} className="form-control" />
-                                    </label>
-                                </div>
-                                <br />
-                                <div className="form-group">
-                                    <button type="submit" className="btn btn-primary">Login</button>
-                                </div>
-                            </form>
-                        </div>
+
+                <div className="row">
+
+
+                    <div className="text-center mb-2">
+                        <img src={LOGO} alt="Logo" className="mb-3 logoooo" />
+                        <h2 className="textoo">1. Inicia sesión</h2>
                     </div>
-                     <div className="card mt-5">
-                        <div className="card-body">
-                            <h3 className="card-title">Autenticar con auth0</h3>
-                            <button type="button" onClick={() => loginWithRedirect()} className="btn btn-primary">Autenticar</button>
+
+                    <form onSubmit={handleSubmit} className="formulario-login">
+
+                        <div className="col-6">
+                            <label htmlFor="name" className="form-label label-inputs">
+                                Nombre de usuario
+                            </label>
+                            <input
+                                type="text"
+                                name="username"
+                                value={form.username}
+                                onChange={handleChange}
+                                className="form-control campo-input"
+                            />
+
                         </div>
-                    </div>  
-                    <br />
-                    <br />
-                    <br />
-                    
+                        <div className="col-6">
+                            <label htmlFor="name" className="form-label label-inputs">
+                                Contraseña
+                            </label>
+                            <input
+                                type="password"
+                                name="password"
+                                value={form.password}
+                                onChange={handleChange}
+                                className="form-control campo-input"
+                            />
+
+                        </div>
+                        
+                        <div className="col-6">
+                            <button
+                                type="submit"
+                                className="boton-entrar"
+                                style={{ marginTop: '24px' }}>
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div className="formulario-login">
+                        <h3 className="resumen-envio">Autenticar con auth0</h3>
+                        <button
+                            type="button"
+                            onClick={() => loginWithRedirect()}
+                            className="boton-entrar">Autenticar</button>
+                    </div>
+
                 </div>
-                
+
             }
-            {user?.isAuth && <button type="button" onClick={() => dispatch(logout())} className="btn btn-primary">Cerrar sesion</button>}
+
+            {user?.isAuth &&
+                <button
+                    type="button"
+                    onClick={() => dispatch(logout())}
+                    className="boton-entrar">Cerrar sesión</button>}
         </div>
     )
 }
