@@ -3,14 +3,18 @@ import * as yup from 'yup';
 import { validate } from 'rut.js';
 import './FormUsuario.css';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// Definición de la interfaz Region
+
 interface Region {
     region: string;
     comunas: string[];
 }
 
 const FormUsuario = () => {
+
+    const navigate = useNavigate();
+
     const validarRut = (rut: string) => validate(rut);
 
     const basicSchema = yup.object().shape({
@@ -24,7 +28,7 @@ const FormUsuario = () => {
         comuna: yup.string().required('Este campo es requerido'),
     });
 
-    const { values, errors, touched, handleChange, handleBlur, handleSubmit } = useFormik({
+    const formik = useFormik({
         initialValues: {
             name: '',
             email: '',
@@ -36,9 +40,12 @@ const FormUsuario = () => {
             comuna: '',
         },
         validationSchema: basicSchema,
-
         onSubmit: (values) => {
             console.log('Datos del formulario:', values);
+
+            if (formik.isValid) {
+                navigate('/pago'); // Navega a la página de pago después de validar el formulario
+            }
 
             const formData = {
                 name: values.name,
@@ -67,11 +74,9 @@ const FormUsuario = () => {
                 })
                 .then((json) => {
                     console.log(json);
-                    // Puedes agregar lógica adicional, como mostrar un mensaje de éxito.
                 })
                 .catch((error) => {
                     console.error(error);
-                    // Puedes mostrar un mensaje de error en la interfaz de usuario.
                 });
         },
     });
@@ -80,7 +85,6 @@ const FormUsuario = () => {
     const [comunas, setComunas] = useState<string[]>([]);
 
     useEffect(() => {
-        // Valores predeterminados para evitar errores antes de cargar datos reales
         setRegiones([]);
         setComunas([]);
 
@@ -98,8 +102,8 @@ const FormUsuario = () => {
 
     const handleRegionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedRegion = event.target.value;
-        handleChange(event); // Actualiza el valor en el estado de Formik
-        setComunas([]); // Reinicia las comunas al cambiar la región
+        formik.handleChange(event);
+        setComunas([]);
 
         const region = regiones?.find((r: Region) => r.region === selectedRegion);
         if (region) {
@@ -108,15 +112,14 @@ const FormUsuario = () => {
     };
 
     return (
-
         <div className="container contenedor-body-checkout">
-
-
-            <form className="row campo-form" onSubmit={handleSubmit}>
-
-            <div className="col-12">
+            <form className="row campo-form" onSubmit={formik.handleSubmit}>
+                <div className="col-12">
                     <h2 className="textoo">1. Compra como invitado</h2>
                 </div>
+
+
+
 
                 <div className="col-6">
                     <label htmlFor="name" className="form-label label-inputs">
@@ -127,11 +130,11 @@ const FormUsuario = () => {
                         className="form-control campo-input"
                         type="text"
                         name="name"
-                        value={values.name}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.name}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.name && touched.name && <span className="help-text">{errors.name}</span>}
+                    {formik.errors.name && formik.touched.name && <span className="help-text">{formik.errors.name}</span>}
                 </div>
 
                 <div className='col-6'>
@@ -143,11 +146,11 @@ const FormUsuario = () => {
                         className="form-control campo-input"
                         type="email"
                         name="email"
-                        value={values.email}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.email}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.email && touched.email && <span className="help-text">{errors.email}</span>}
+                    {formik.errors.email && formik.touched.email && <span className="help-text">{formik.errors.email}</span>}
                 </div>
 
                 <div className='col-6'>
@@ -159,11 +162,11 @@ const FormUsuario = () => {
                         className="form-control campo-input"
                         type="text"
                         name="rut"
-                        value={values.rut}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.rut}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.rut && touched.rut && <span className="help-text">{errors.rut}</span>}
+                    {formik.errors.rut && formik.touched.rut && <span className="help-text">{formik.errors.rut}</span>}
                 </div>
 
                 <div className='col-6'>
@@ -176,11 +179,11 @@ const FormUsuario = () => {
                         type="text"
                         id="phone"
                         name="phone"
-                        value={values.phone}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.phone}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.phone && touched.phone && (<span className="help-text">{errors.phone}</span>)}
+                    {formik.errors.phone && formik.touched.phone && (<span className="help-text">{formik.errors.phone}</span>)}
                 </div>
 
                 <div className='col-12'>
@@ -192,12 +195,12 @@ const FormUsuario = () => {
                         className="form-control campo-input"
                         type="text"
                         name="direccion"
-                        value={values.direccion}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.direccion}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.direccion && touched.direccion && (
-                        <span className="help-text">{errors.direccion}</span>
+                    {formik.errors.direccion && formik.touched.direccion && (
+                        <span className="help-text">{formik.errors.direccion}</span>
                     )}
                 </div>
 
@@ -210,7 +213,7 @@ const FormUsuario = () => {
                         className="form-select campo-input"
                         id="region"
                         name="region"
-                        value={values.region}
+                        value={formik.values.region}
                         onChange={handleRegionChange}
                     >
                         <option value="">Elige tu Región</option>
@@ -220,8 +223,8 @@ const FormUsuario = () => {
                             </option>
                         ))}
                     </select>
-                    {errors.region && touched.region && (
-                        <span className="help-text">{errors.region}</span>
+                    {formik.errors.region && formik.touched.region && (
+                        <span className="help-text">{formik.errors.region}</span>
                     )}
                 </div>
                 <div className="col-6">
@@ -230,8 +233,8 @@ const FormUsuario = () => {
                         className="form-select campo-input"
                         id="comuna"
                         name="comuna"
-                        value={values.comuna}
-                        onChange={handleChange}
+                        value={formik.values.comuna}
+                        onChange={formik.handleChange}
                     >
                         <option value="">Seleccione una comuna</option>
                         {comunas.map(comuna => (
@@ -240,8 +243,8 @@ const FormUsuario = () => {
                             </option>
                         ))}
                     </select>
-                    {errors.comuna && touched.comuna && (
-                        <span className="help-text">{errors.comuna}</span>
+                    {formik.errors.comuna && formik.touched.comuna && (
+                        <span className="help-text">{formik.errors.comuna}</span>
                     )}
                 </div>
 
@@ -255,25 +258,22 @@ const FormUsuario = () => {
                         className="col-12 campo-input"
                         type="text"
                         name="referencia"
-                        value={values.referencia}
-                        onBlur={handleBlur}
-                        onChange={handleChange}
+                        value={formik.values.referencia}
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
                     />
-                    {errors.referencia && touched.referencia && (
-                        <span className="help-text">{errors.referencia}</span>
+                    {formik.errors.referencia && formik.touched.referencia && (
+                        <span className="help-text">{formik.errors.referencia}</span>
                     )}
                 </div>
 
                 <div className="">
-                    <button type="submit" className="boton-navegacion"  style={{ width: '600px', marginTop: '24px'}}>
-                        Siguiente
-                    </button>
+                        <button type="submit" className="boton-navegacion" style={{ width: '600px', marginTop: '24px' }} disabled={!formik.isValid}>
+                            Ir al pago
+                        </button>
+                    
                 </div>
-
-
             </form>
-
-
         </div>
     );
 };

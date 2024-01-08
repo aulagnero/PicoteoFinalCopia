@@ -13,15 +13,15 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
     const [isSubscription, setIsSubscription] = useState(false);
 
     const RadioUnchecked = () => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 5C5.449 5 5 5.449 5 6V18C5 18.551 5.449 19 6 19H18C18.551 19 19 18.551 19 18V6C19 5.449 18.551 5 18 5H6ZM18 21H6C4.346 21 3 19.654 3 18V6C3 4.346 4.346 3 6 3H18C19.654 3 21 4.346 21 6V18C21 19.654 19.654 21 18 21Z" fill="#252525" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8.33333C9.08167 8.33333 8.33333 9.08167 8.33333 10V30C8.33333 30.9183 9.08167 31.6667 10 31.6667H30C30.9183 31.6667 31.6667 30.9183 31.6667 30V10C31.6667 9.08167 30.9183 8.33333 30 8.33333H10ZM30 35H10C7.24333 35 5 32.7567 5 30V10C5 7.24333 7.24333 5 10 5H30C32.7567 5 35 7.24333 35 10V30C35 32.7567 32.7567 35 30 35Z" fill="#252525" />
         </svg>
     );
 
     const RadioChecked = () => (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7046 8.3945L10.9206 13.3635L9.2876 11.2775C8.9466 10.8415 8.3186 10.7655 7.8836 11.1065C7.4486 11.4465 7.3716 12.0755 7.7126 12.5095L10.1436 15.6165C10.3336 15.8585 10.6236 15.9995 10.9316 15.9995H10.9386C11.2476 15.9985 11.5396 15.8525 11.7266 15.6055L16.2956 9.6055C16.6306 9.1655 16.5456 8.5395 16.1056 8.2045C15.6656 7.8695 15.0376 7.9555 14.7046 8.3945ZM19 18C19 18.552 18.551 19 18 19H6C5.449 19 5 18.552 5 18V6C5 5.448 5.449 5 6 5H18C18.551 5 19 5.448 19 6V18ZM18 3H6C4.346 3 3 4.346 3 6V18C3 19.654 4.346 21 6 21H18C19.654 21 21 19.654 21 18V6C21 4.346 19.654 3 18 3Z" fill="#252525" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5077 13.9908L18.201 22.2725L15.4793 18.7958C14.911 18.0692 13.8643 17.9425 13.1393 18.5108C12.4143 19.0775 12.286 20.1258 12.8543 20.8492L16.906 26.0275C17.2227 26.4308 17.706 26.6658 18.2193 26.6658H18.231C18.746 26.6642 19.2327 26.4208 19.5443 26.0092L27.1593 16.0092C27.7177 15.2758 27.576 14.2325 26.8427 13.6742C26.1093 13.1158 25.0627 13.2592 24.5077 13.9908ZM31.6667 30C31.6667 30.92 30.9183 31.6667 30 31.6667H10C9.08167 31.6667 8.33333 30.92 8.33333 30V10C8.33333 9.08 9.08167 8.33333 10 8.33333H30C30.9183 8.33333 31.6667 9.08 31.6667 10V30ZM30 5H10C7.24333 5 5 7.24333 5 10V30C5 32.7567 7.24333 35 10 35H30C32.7567 35 35 32.7567 35 30V10C35 7.24333 32.7567 5 30 5Z" fill="#252525" />
+    </svg>
     );
 
     const handleIncrease = () => {
@@ -66,6 +66,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
                         {!isSubscription ? <RadioChecked /> : <RadioUnchecked />}
                     </label>
                     <br />
+                    <br />
                     <span className='detalles-titulo'>Compra unitaria</span>
                     <p className='detalles-precio'>${price}</p>
 
@@ -100,6 +101,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ title, price }) => {
                     <label htmlFor="monthlySubscription">
                         {isSubscription ? <RadioChecked /> : <RadioUnchecked />}
                     </label>
+                    <br />
                     <br />
                     <span className='detalles-titulo'>Suscripción mensual</span>
                 </div>

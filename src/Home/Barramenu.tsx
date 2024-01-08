@@ -33,7 +33,7 @@ function Barra2() {
                     </button>
                 </div>
                 <div className="col-5 item-menu">
-                    <button className="productoss">
+                    <button className="productoss" disabled>
                         Preguntas frecuentes
                     </button>
                     <Outlet />

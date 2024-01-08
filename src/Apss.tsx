@@ -22,6 +22,8 @@ import PaginaCarro from "./Paginas/PaginaCarro";
 import PaginaUsuario from "./Paginas/PaginaUsuario";
 import PaginaLogin from "./Paginas/PaginaLogin";
 import PaginaRegistro from "./Paginas/PaginaRegistro";
+import PaginaPago from "./Paginas/PaginaPago";
+import PaginaExito from "./Paginas/PaginaExito";
 
 
 function Apps() {
@@ -53,6 +55,10 @@ function Apps() {
                         <Route path="/registro" element={<PaginaRegistro />} />
                         <Route path="/invitado" element={<PaginaUsuario />} />
                         <Route path="/usuario" element={<PaginaLogin />} />
+                        
+                        <Route path="/pago" element={<PaginaPago />} />
+                        <Route path="/exito" element={<PaginaExito />} />
+
 
                         <Route path="/protected" element={
                             <ProtectedComponent allowedRoles={["admin", "admin-search", "user-search"]}>
