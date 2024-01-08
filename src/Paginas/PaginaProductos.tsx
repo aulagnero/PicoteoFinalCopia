@@ -3,7 +3,7 @@ import ProductCardList from '../Componentes/ProductCardList';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
 import DetalleProducto from '../Componentes/DetalleProducto';
-import RedesSociales from '../Componentes/RedesSociales';
+//import AppRegala from '../Componentes/AppRegala';
 
 function ListaProductos() {
 
@@ -19,9 +19,7 @@ function ListaProductos() {
 
       <ProductCardList />
 
-      <h2 className='titulo-card-list'>Súmate a nuestra comunidad</h2>
-
-      <RedesSociales />
+      {/* <AppRegala /> */}
 
       <Preguntas />
 

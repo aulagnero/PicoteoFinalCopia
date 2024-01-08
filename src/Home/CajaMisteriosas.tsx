@@ -86,7 +86,7 @@ function CajaMisteriosa() {
         </div>
 
         <div className='row'>
-          <h2 className="textoo"><span >Productos individuales</span></h2>
+          <h2 className="títulos"><span >Productos individuales</span></h2>
         </div>
         <div className="row contenedor-cards">
           <div className="col-2 text-lateral">

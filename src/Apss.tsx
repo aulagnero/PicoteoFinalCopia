@@ -19,11 +19,12 @@ import PaginaVinos from "./Paginas/PaginaVinos";
 import PaginaProductos from "./Paginas/PaginaProductos";
 import PaginaSnacks from "./Paginas/PaginaSnacks";
 import PaginaCarro from "./Paginas/PaginaCarro";
-import PaginaUsuario from "./Paginas/PaginaUsuario";
 import PaginaLogin from "./Paginas/PaginaLogin";
 import PaginaRegistro from "./Paginas/PaginaRegistro";
 import PaginaPago from "./Paginas/PaginaPago";
 import PaginaExito from "./Paginas/PaginaExito";
+import { Resumencarro } from "./Carrito2/Resumen carro";
+import PaginaUsuario from "./Paginas/PaginaUsuario";
 
 
 function Apps() {
@@ -55,9 +56,11 @@ function Apps() {
                         <Route path="/registro" element={<PaginaRegistro />} />
                         <Route path="/invitado" element={<PaginaUsuario />} />
                         <Route path="/usuario" element={<PaginaLogin />} />
-                        
+                        <Route path="/resumencarro" element={<Resumencarro />} />
                         <Route path="/pago" element={<PaginaPago />} />
                         <Route path="/exito" element={<PaginaExito />} />
+
+                        
 
 
                         <Route path="/protected" element={

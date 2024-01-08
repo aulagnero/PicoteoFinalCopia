@@ -1,9 +1,13 @@
 
+import { useSelector } from 'react-redux';
 import BotonesUsuario from '../Componentes/BotonesUsuario';
 import FormRegistro from '../Componentes/FormRegistro';
 import ResumenCompra from '../Componentes/ResumenCompra';
 
 function PaginaUsuario() {
+
+    const precioTotal = useSelector((state: any) => state.carroReducers.precioTotal);
+    const productos = useSelector((state: any) => state.carroReducers.productos);
 
     return (
         <div className='container'>
@@ -17,7 +21,7 @@ function PaginaUsuario() {
                     <FormRegistro />
                     </div>
 
-                <ResumenCompra productos={[]} precioTotal={0} />
+                    <ResumenCompra productos={productos} precioTotal={precioTotal} />
 
             </div>
         </div>

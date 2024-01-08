@@ -6,6 +6,8 @@ function PaginaExito() {
     const navigate = useNavigate();
 
     return (
+
+        
         <div className='container'>
             <div className="row contenedor-body-exito">
 

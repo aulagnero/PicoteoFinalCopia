@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import CajaIndividual from '../Componentes/CajaIndividual';
 import { Producto } from '../Componentes/ProductoIndividual';
-import ProductCardList from '../Componentes/ProductCardList';
 import RedesSociales from '../Componentes/RedesSociales';
 import Preguntas from '../Componentes/Preguntas';
 import BotonesProducto from '../Componentes/BotonesProducto';
@@ -9,6 +8,7 @@ import BotonesCajas from '../Componentes/BotonesCajas';
 import CajaCardList from '../Componentes/CajaCardList';
 import CajaDetail from '../Componentes/CajaDetail';
 import ProductCommentList from '../Componentes/ProductCommentList';
+import ProductCardList from '../Componentes/ProductCardList';
 
 function PaginaCajas() {
   const [producto, setProducto] = useState<Producto | null>(null);
@@ -27,35 +27,42 @@ function PaginaCajas() {
     obtenerProducto();
   }, []);
 
-  return (
-    <div>
-      <BotonesProducto />
+ 
 
-      <BotonesCajas />
+    return (
+      <div>
+        <BotonesProducto />
 
-      {producto && <CajaIndividual product={producto} />}
-     
+        <BotonesCajas />
 
-      <h2 className='titulo-caja-list'>Productos incluidos</h2>
+        {producto && <CajaIndividual product={producto} />}
 
-      <CajaCardList />
 
-      {producto && <CajaDetail productId={producto.id.toString()} title={producto.nombre} price={producto.precio} />}
+        <h2 className='titulo-caja-list'>Productos incluidos</h2>
 
-      <h2 className='titulo-card-list'>Opiniones de la comunidad</h2>
+        <CajaCardList />
 
-      <ProductCommentList />
+        {producto && <CajaDetail productId={producto.id.toString()} title={producto.nombre} price={producto.precio} />}
 
-      <h2 className='titulo-card-list'>¡Que no te falte nada! Revisa más productos para agregar a tu BOX</h2>
+        <h2 className='titulo-card-list'>Opiniones de la comunidad</h2>
 
-      <ProductCardList />
+        <ProductCommentList />
 
-      <h2 className='titulo-card-list'>Unete a nuestra comunidad</h2>
+        
 
-      <RedesSociales />
-      <Preguntas />
-    </div>
-  );
-}
+        <h2 className='titulo-card-list'>¡Que no te falte nada! Revisa más productos para agregar a tu BOX</h2>
+
+        <ProductCardList />
+
+        <h2 className='titulo-card-list'>Unete a nuestra comunidad</h2>
+
+        <RedesSociales />
+
+        
+        <Preguntas />
+      </div>
+    );
+  }
+
 
 export default PaginaCajas;
