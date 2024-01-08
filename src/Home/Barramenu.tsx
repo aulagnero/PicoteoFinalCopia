@@ -1,9 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import "./barra.css"
 
 
 
 function Barra2() {
+
+    const navigate = useNavigate();
 
     return (
 
@@ -13,33 +15,35 @@ function Barra2() {
                 <div className="col-1"></div>
 
                 <div className="col-2 item-menu">
-                    <button className="productoss">
-
-                        <Link className="a-menu" to="/cajas">Cajas</Link>
-
+                    <button
+                        className="productoss"
+                        onClick={() => navigate('/cajas')}>
+                        Cajas
+                    </button>
+                </div>
+                <div className="col-2 item-menu">
+                    <button 
+                    className="productoss"
+                    onClick={() => navigate('/vinos')}>
+                    Vinos
 
                     </button>
                 </div>
                 <div className="col-2 item-menu">
-                    <button className="productoss">
-
-                    <Link className="a-menu" to="/vinos">Vinos</Link>
-                    
-                    </button>
-                </div>
-                <div className="col-2 item-menu">
-                    <button className="productoss">
-                        <Link className="a-menu" to="/snacks">Snacks</Link>
+                    <button className="productoss"
+                    onClick={() => navigate('/snacks')}>
+                    Snacks
                     </button>
                 </div>
                 <div className="col-5 item-menu">
-                    <button className="productoss" disabled>
+                    <button className="productoss" 
+                    onClick={() => navigate('/mantenedor')}>
                         Preguntas frecuentes
                     </button>
                     <Outlet />
                 </div>
             </div>
         </div>
-            )
+    )
 }
-            export default Barra2 
+export default Barra2 
