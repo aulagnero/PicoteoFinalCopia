@@ -1,6 +1,8 @@
 import React from 'react';
 //import Swipe from 'react-swipe';
 import './Card3.css';
+import { useDispatch } from 'react-redux';
+import { agregarProducto } from '../redux2/carroSlice';
 
 
 export const Link = "http://localhost:3000/products"
@@ -40,10 +42,12 @@ function Rating({ value }: { value: number }) {
 
 const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
+  const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
-    // Implementar la lógica para agregar al carro de compras
-    // console.log(`Agregado al carro: ${quantity} ${producto.name}(s)`);
+  const addProducto = () => {
+   
+      dispatch(agregarProducto(producto));
+    
   };
 
   return (
@@ -88,7 +92,7 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
 
           <div className="row">
             <div className="col-12 cuerpo-boton">
-              <button className="btn boton-navegacion" style={{width: '108px'}} onClick={handleAddToCart}>
+              <button className="btn boton-navegacion" style={{width: '108px'}} onClick={addProducto}>
                 ¡Sí, la quiero!
               </button>
             </div>

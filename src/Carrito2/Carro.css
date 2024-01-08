@@ -5,7 +5,7 @@
   align-items: flex-start;
   align-content: flex-start;
   gap: 40px 32px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .alerta-carrito {

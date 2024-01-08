@@ -10,7 +10,7 @@ const BotonesCajas: React.FC = () => {
         <div className='container mt-24'>
 
             <div className='row mt-24'>
-                <h2 className="textoo"><span >Cajas</span></h2>
+                <h2 className="titulo-card-list"><span >Cajas</span></h2>
             </div>
 
 

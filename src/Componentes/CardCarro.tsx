@@ -72,7 +72,7 @@ const CardCarro: React.FC<CardCarroProps> = ({ producto, quantity: initialQuanti
 
     return (
         <>
-            <div className="card card-carro" >
+            <div className="card-carro" >
 
                 <div className='cont-foto'>
                     {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}

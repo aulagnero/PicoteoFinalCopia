@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { eliminarProducto } from "../redux2/carroSlice";
 import CardCarro from '../Componentes/CardCarro';
 import "./Carro.css"
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ResumenCompra from '../Componentes/ResumenCompra';
 
 
@@ -10,6 +10,8 @@ function Carro() {
     const dispatch = useDispatch();
     const precioTotal = useSelector((state: any) => state.carroReducers.precioTotal);
     const productos = useSelector((state: any) => state.carroReducers.productos);
+
+    const navigate = useNavigate();
 
     const deleteProducto = (id: number) => {
         dispatch(eliminarProducto(id));
@@ -21,6 +23,7 @@ function Carro() {
                 <div className="col-4">
                     <h2 className='textoo'>Carro de compras</h2>
                 </div>
+                
                 <div className="col-8"></div>
                 <div className="col-7 detalle-carro">
                     {productos.map((producto: any) => (
@@ -53,9 +56,13 @@ function Carro() {
             <br />
 
 
-            <div>
+            <div className='col-12'>
 
-                <Link to="/usuario" className="btn btn-primary">Confirmar carro de compras</Link>
+            <button className="agregar-carro" onClick={() => navigate('/usuario')}>
+                        Confirmar carro de compras
+                    </button>
+
+            
             </div>
         </div>
     );
