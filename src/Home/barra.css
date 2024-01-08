@@ -25,6 +25,16 @@
 
 }
 
+button.productoss:disabled {
+    
+    color: lightgray;
+}
+
+button.productoss a:hover {
+    text-decoration: none;
+    color: #820A7D;
+}
+
 .barra-menu {
     display: flex;
     justify-content: space-between;

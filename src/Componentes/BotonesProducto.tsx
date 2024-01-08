@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import './BotonesProducto.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const BotonesProducto: React.FC = () => {
+
+    const navigate = useNavigate();
+
     useEffect(() => {
         // Call API here and consume the content
     }, []);
@@ -11,23 +14,29 @@ const BotonesProducto: React.FC = () => {
         <div className='container'>
             <div className="row botonera-navegacion">
                 <div className="col-4 contenedor-boton">
-                <Link to="/cajas">
-                <button className="boton-navegacion" >Cajas</button>
-                </Link>
+
+                    <button className="boton-navegacion" onClick={() => navigate('/cajas')}>
+                        Cajas
+                    </button>
+
                 </div>
 
-                 <div className="col-4 contenedor-boton">
-                 <Link to="/vinos">
-                  <button className="boton-navegacion">  Vinos </button>
-                  </Link>
-                </div>
-                
                 <div className="col-4 contenedor-boton">
-                <Link to="/snacks">
-                <button className="boton-navegacion" >Snacks</button>
-                </Link>
+
+                    <button className="boton-navegacion" onClick={() => navigate('/vinos')}>
+                        Vinos
+                    </button>
+
                 </div>
-            
+
+                <div className="col-4 contenedor-boton">
+
+                    <button className="boton-navegacion" onClick={() => navigate('/snacks')}>
+                        Snacks
+                    </button>
+
+                </div>
+
             </div>
         </div>
     );

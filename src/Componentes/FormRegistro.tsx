@@ -14,14 +14,32 @@ const FormUsuario = () => {
     const validarRut = (rut: string) => validate(rut);
 
     const basicSchema = yup.object().shape({
-        name: yup.string().required('Este campo es requerido'),
-        email: yup.string().email('Este campo debe ser un email válido').required('Este campo es requerido'),
-        rut: yup.string().test('rut-invalido', 'Rut inválido', (rut) => rut ? validarRut(rut) : true),
-        phone: yup.string().min(9, 'El número de teléfono debe tener 9 caracteres').max(9, 'El número de teléfono debe tener 9 caracteres').required('Este campo es obligatorio'),
-        direccion: yup.string().required('Este campo es requerido'),
-        referencia: yup.string().required('Este campo es requerido'),
-        region: yup.string().required('Este campo es requerido'),
-        comuna: yup.string().required('Este campo es requerido'),
+        name: yup
+            .string()
+            .required('Este campo es requerido'),
+        email: yup
+            .string()
+            .email('Este campo debe ser un email válido')
+            .required('Este campo es requerido'),
+        rut: yup
+            .string()
+            .test('rut-invalido', 'Rut inválido', (rut) => rut ? validarRut(rut) : true),
+        phone: yup
+            .string()
+            .min(9, 'El número de teléfono debe tener 9 caracteres')
+            .max(9, 'El número de teléfono debe tener 9 caracteres').required('Este campo es obligatorio'),
+        direccion: yup
+            .string()
+            .required('Este campo es requerido'),
+        referencia: yup
+            .string()
+            .required('Este campo es requerido'),
+        region: yup
+            .string()
+            .required('Este campo es requerido'),
+        comuna: yup
+            .string()
+            .required('Este campo es requerido'),
         password: yup
             .string()
             .required('Este campo es requerido')
