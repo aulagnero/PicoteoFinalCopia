@@ -1,12 +1,14 @@
-.contenedor-body-checkout {
+.contenedor-body-mantenedor {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 24px;
-   
+    width: 100%;
     border-radius: 16px;
     background: var(--Others-Cards, #F9F9F7);
-
+    padding: 24px;
+    margin-bottom: 48px;
 }
 
 .contenedor-envio {
@@ -268,8 +270,8 @@
 }
 
 .boton-ingresar:hover {
-    background:   #820A7D;
-    border-color:   #820A7D;
+    background: #820A7D;
+    border-color: #820A7D;
     color: white;
 }
 

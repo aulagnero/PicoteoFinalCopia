@@ -11,6 +11,7 @@ const FormIngresoProdBS: React.FC = () => {
     categoria: "",
     descripcion: "",
     precio: "",
+    valoracion: "",
     imagen: [],
   });
 
@@ -75,6 +76,7 @@ const FormIngresoProdBS: React.FC = () => {
             categoria: "",
             descripcion: "",
             precio: "",
+            valoracion: "",
             imagen: "",
           });
         }, 3000);
@@ -89,7 +91,8 @@ const FormIngresoProdBS: React.FC = () => {
 
 
   return (
-    <div className="contenedor-body-checkout">
+
+    
       <div className="container">
         <div className="row g">
           <h2><div className="col-12 ingreso">Ingreso de productos</div></h2>
@@ -157,6 +160,21 @@ const FormIngresoProdBS: React.FC = () => {
               </div>
 
               <div className="col-md-6">
+                <label htmlFor="valorationInput" className="form-label label-datos">
+                  Valoración
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="valorationInput"
+                  placeholder="Escribe un número del 1 al 5"
+                  name="valoracion"
+                  onChange={handleChange}
+                  value={formData.valoracion}
+                />
+              </div>
+
+              <div className="col-md-6">
                 <label htmlFor="imageInput" className="form-label label-datos">
                   Imágenes
                 </label>
@@ -185,7 +203,7 @@ const FormIngresoProdBS: React.FC = () => {
                 {/* React Toastify Container para mostrar notificaciones */}
                 <ToastContainer />
 
-                <button type="submit" className="btn btn-secondary boton-ingresar mb-3 mt-3">
+                <button type="submit" className="boton-ingresar">
                   Ingresar
                 </button>
               </div>
@@ -193,7 +211,7 @@ const FormIngresoProdBS: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+     
   );
 };
 
