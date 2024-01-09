@@ -3,24 +3,25 @@ import * as yup from 'yup';
 import { validate } from 'rut.js';
 import './FormUsuario.css';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
+interface FormUsuarioProps {
+    onPagoClick: () => void;
+  }
 
 interface Region {
     region: string;
     comunas: string[];
 }
 
-const FormUsuario = () => {
+const FormUsuario: React.FC<FormUsuarioProps> = (props) => {
 
-    const navigate = useNavigate();
 
     const validarRut = (rut: string) => validate(rut);
 
     const basicSchema = yup.object().shape({
         name: yup.string().required('Este campo es requerido'),
         email: yup.string().email('Este campo debe ser un email válido').required('Este campo es requerido'),
-        rut: yup.string().test('rut-invalido', 'Rut inválido', (rut) => rut ? validarRut(rut) : true),
+        rut: yup.string().test('rut-invalido', 'Rut inválido', (rut) => rut ? validarRut(rut) : true).required('Este campo es requerido'),
         phone: yup.string().min(9, 'El número de teléfono debe tener 9 caracteres').max(9, 'El número de teléfono debe tener 9 caracteres').required('Este campo es obligatorio'),
         direccion: yup.string().required('Este campo es requerido'),
         referencia: yup.string().required('Este campo es requerido'),
@@ -40,23 +41,27 @@ const FormUsuario = () => {
             comuna: '',
         },
         validationSchema: basicSchema,
-        onSubmit: (values) => {
+    onSubmit: (values, { setSubmitting }) => {
+        if (!formik.isValid) {
+            setSubmitting(false);
+            return;
+        }
+
             console.log('Datos del formulario:', values);
 
-            if (formik.isValid) {
-                navigate('/pago'); // Navega a la página de pago después de validar el formulario
-            }
+            // Navega a la página de pago después de validar el formulario
+        props.onPagoClick();
 
-            const formData = {
-                name: values.name,
-                email: values.email,
-                rut: values.rut,
-                phone: values.phone,
-                direccion: values.direccion,
-                referencia: values.referencia,
-                region: values.region,
-                comuna: values.comuna,
-            };
+        const formData = {
+            name: values.name,
+            email: values.email,
+            rut: values.rut,
+            phone: values.phone,
+            direccion: values.direccion,
+            referencia: values.referencia,
+            region: values.region,
+            comuna: values.comuna,
+        };
 
             fetch('http://localhost:3000/formulario', {
                 method: 'POST',
@@ -115,7 +120,7 @@ const FormUsuario = () => {
         <div className="container contenedor-body-checkout">
             <form className="row campo-form" onSubmit={formik.handleSubmit}>
                 <div className="col-12">
-                    <h2 className="textoo">1. Compra como invitado</h2>
+                    <h2 className="textoo">Comprar como invitado</h2>
                 </div>
 
 
@@ -268,7 +273,11 @@ const FormUsuario = () => {
                 </div>
 
                 <div className="">
-                        <button type="submit" className="boton-navegacion" style={{ width: '600px', marginTop: '24px' }} disabled={!formik.isValid}>
+                        <button 
+                        type="submit" 
+                        className="boton-navegacion" 
+                        style={{ width: '600px', marginTop: '24px' }} 
+                        disabled={!formik.isValid}>
                             Ir al pago
                         </button>
                     

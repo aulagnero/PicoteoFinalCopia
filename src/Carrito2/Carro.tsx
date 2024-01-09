@@ -58,7 +58,7 @@ function Carro() {
 
             <div className='col-12'>
 
-            <button className="agregar-carro" onClick={() => navigate('/usuario')}>
+            <button className="agregar-carro" style={{width: '1300px'}} onClick={() => navigate('/checkout')}>
                         Confirmar carro de compras
                     </button>
 

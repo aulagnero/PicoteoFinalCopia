@@ -12,6 +12,7 @@ const FormIngresoProdBS: React.FC = () => {
     descripcion: "",
     precio: "",
     valoracion: "",
+    cantidad: "",
     imagen: [],
   });
 
@@ -31,7 +32,7 @@ const FormIngresoProdBS: React.FC = () => {
     Promise.all(imagePromises).then((base64Images) => {
       setFormData({
         ...formData,
-        imagen: [...formData.imagen, ...base64Images],
+        imagen: [...formData.imagen as string[], ...base64Images],
       });
     });
   };
@@ -77,6 +78,7 @@ const FormIngresoProdBS: React.FC = () => {
             descripcion: "",
             precio: "",
             valoracion: "",
+            cantidad: "",
             imagen: "",
           });
         }, 3000);
@@ -173,6 +175,22 @@ const FormIngresoProdBS: React.FC = () => {
                   value={formData.valoracion}
                 />
               </div>
+
+              <div className="col-md-6">
+                <label htmlFor="stockInput" className="form-label label-datos">
+                  Cantidad
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="stockInput"
+                  placeholder="Escribe un número"
+                  name="cantidad"
+                  onChange={handleChange}
+                  value={formData.cantidad}
+                />
+              </div>
+
 
               <div className="col-md-6">
                 <label htmlFor="imageInput" className="form-label label-datos">

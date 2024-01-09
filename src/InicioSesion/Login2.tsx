@@ -4,7 +4,7 @@ import { Md5 } from 'ts-md5';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import LOGO from "../Home/imagenes/logo-naciones.png"
-import { RootState } from "../redux/store";
+import { RootState } from "../redux2/store";
 import { login, logout } from "../redux/userSlice";
 import { jwtDecode } from 'jwt-decode';
 import "./login.css"
@@ -96,7 +96,7 @@ export const LoginJWT = () => {
 
                     <div className="text-center mb-2">
                         <img src={LOGO} alt="Logo" className="mb-3 logoooo" />
-                        <h2 className="textoo">1. Inicia sesión</h2>
+                        <h2 className="textoo">Inicio de sesión</h2>
                     </div>
 
                     <form onSubmit={handleSubmit} className="formulario-login">

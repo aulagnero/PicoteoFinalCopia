@@ -60,6 +60,18 @@
     text-overflow: ellipsis;
 }
 
+.stock-disponible {
+    margin: 0px;
+    color: var(--Titles-Black, #007D7B);
+    /* Headlines/S */
+    font-family: 'Novatica', sans-serif !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+
+}
+
 #form {
     width: 250px;
     margin: 0 auto;

@@ -20,30 +20,8 @@
     }
   }
   
-  .not-found h1 {
-    font-size: 4rem;
-    color: #333;
-  }
   
-  .not-found p {
-    font-size: 1.5rem;
-    color: #666;
-    margin-top: 20px;
-  }
   
-  .not-found a {
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .not-found a:hover {
-    background-color: #0056b3;
-  }
   .animated-icon {
     width: 200px; /* Ajusta el ancho según tus necesidades */
     height: 100px; /* Ajusta la altura según tus necesidades */
@@ -59,3 +37,46 @@
       transform: scale(1.2); /* Tamaño aumentado */
     }
   }
+
+  .boton-navegacion {
+    color: var(--Text-White, var(--ICON-WHITE, #F5F5F5));
+    text-align: center;
+    width: 400px;
+    font-family: 'Novatica', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-color: #007D7B;
+    border-radius: 8px;
+    background: var(--Buttons-Default, #007D7B);
+    /* Button Shadow */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.boton-navegacion:hover {
+    background: #820A7D;
+    border-color: #820A7D;
+    color: white;
+}
+
+.boton-navegacion:active {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--ICON-ACTIVE, #025B59);
+    /* Button Pressed */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+}

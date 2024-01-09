@@ -104,6 +104,9 @@ const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
             <div className='col-12'>
               <Rating value={producto.valoracion} />
             </div>
+
+            <div className= "col-12 stock-disponible">Cantidad disponible: {producto.cantidad}</div>
+
             <div className="card-text desc" style={{ height: '50px' }}>
               <p>{producto.descripcion}</p>
             </div>

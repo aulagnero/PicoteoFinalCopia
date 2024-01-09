@@ -25,7 +25,7 @@ const CardResumen: React.FC<CardResumenProps> = ({ productoId }) => {
     }
 
     return (
-        <div className="card card-resumen">
+        <div className="card-resumen">
 
             <div className='cont-foto'>
                 {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}

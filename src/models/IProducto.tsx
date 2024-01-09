@@ -5,6 +5,7 @@ export interface IProducto {
     categoria: string;
     descripcion: string;
     precio: number;
+    cantidad: number;
     imagen: string[];
    
   }
