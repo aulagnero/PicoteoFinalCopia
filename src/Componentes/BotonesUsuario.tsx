@@ -1,29 +1,20 @@
-import React, { useEffect } from 'react';
 import './BotonesProducto.css';
-import { useNavigate } from 'react-router-dom';
 
-const BotonesProducto: React.FC = () => {
+interface BotonesUsuarioProps {
+  onLoginClick: () => void;
+  onUsuarioClick: () => void;
+  onRegistroClick: () => void;
+}
 
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        // Call API here and consume the content
-    }, []);
+const BotonesUsuario: React.FC<BotonesUsuarioProps> = ({ onLoginClick, onUsuarioClick, onRegistroClick }) => {
 
     return (
         <div className='container'>
             <div className="row botonera-navegacion">
-                <div className="col-4 contenedor-boton">
-                
-                <button className="boton-navegacion" onClick={() => navigate('/invitado')}>
-                    Invitado
-                    </button>
-                
-                </div>
-
+ 
                  <div className="col-4 contenedor-boton">
                  
-                  <button className="boton-navegacion" onClick={() => navigate('/usuario')}> 
+                  <button className="boton-navegacion" onClick={onLoginClick}> 
                   Iniciar sesión 
                   </button>
                   
@@ -31,9 +22,17 @@ const BotonesProducto: React.FC = () => {
                 
                 <div className="col-4 contenedor-boton">
                 
-                <button className="boton-navegacion" onClick={() => navigate('/registro')}>
+                <button className="boton-navegacion" onClick={onUsuarioClick}>
+                    Usuario
+                </button>
+                
+                </div>
+
+                <div className="col-4 contenedor-boton">
+                
+                <button className="boton-navegacion" onClick={onRegistroClick}>
                     Registrarse
-                    </button>
+                </button>
                 
                 </div>
             
@@ -42,4 +41,4 @@ const BotonesProducto: React.FC = () => {
     );
 };
 
-export default BotonesProducto;
+export default BotonesUsuario;

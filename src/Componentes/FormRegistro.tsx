@@ -10,7 +10,7 @@ interface Region {
     comunas: string[];
 }
 
-const FormUsuario = () => {
+const FormRegistro = () => {
     const validarRut = (rut: string) => validate(rut);
 
     const basicSchema = yup.object().shape({
@@ -156,7 +156,7 @@ const FormUsuario = () => {
             <form className="row campo-form" onSubmit={handleSubmit}>
 
                 <div className="col-12">
-                    <h2 className="textoo">1. Regístrate</h2>
+                    <h2 className="textoo">Registro</h2>
                 </div>
 
                 <div className="col-6">
@@ -351,4 +351,4 @@ const FormUsuario = () => {
     );
 };
 
-export default FormUsuario;
+export default FormRegistro;

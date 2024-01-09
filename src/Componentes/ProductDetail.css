@@ -10,7 +10,11 @@
 }
 
 .product-info {
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
+    
+    display: flex;
+    gap: 6px;
 }
 
 .compra-unitaria {

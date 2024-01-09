@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //import Swipe from 'react-swipe';
 import './CardCarro.css';
 import { useDispatch } from 'react-redux';
-import { eliminarProducto } from '../redux2/carroSlice';
+import { eliminarDelCarro } from '../redux2/carroSlice';
 
 
 
@@ -53,10 +53,7 @@ const CardCarro: React.FC<CardCarroProps> = ({ producto, quantity: initialQuanti
     const [quantity, setQuantity] = useState(initialQuantity);
     const dispatch = useDispatch();
 
-    const handleDelete = () => {
-        dispatch(eliminarProducto(producto.id));
-        onDelete(producto.id);
-    };
+   
 
     const handleIncrease = () => {
         setQuantity(quantity + 1);
@@ -68,7 +65,12 @@ const CardCarro: React.FC<CardCarroProps> = ({ producto, quantity: initialQuanti
         }
     };
 
+    const handleDelete = () => {
+        dispatch(eliminarDelCarro(producto.id));
+        onDelete(producto.id);
+    };
 
+    
 
     return (
         <>

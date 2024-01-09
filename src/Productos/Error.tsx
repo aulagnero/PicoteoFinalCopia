@@ -12,9 +12,9 @@ function NotFound() {
         alt="Icono en movimiento"
         className="animated-icon"
       />
-      <h1>404 - Página no encontrada</h1>
-      <p>Lo sentimos, la página que buscas no existe.</p>
-      <Link to="/" className="back-button">Volver a la página principal</Link>
+      <h1 className="titulo-exito">404 - Página no encontrada</h1>
+      <p className="texto-exito">Lo sentimos, la página que buscas no existe.</p>
+      <Link to="/" ><button className="boton-navegacion">Volver a la página principal</button></Link>
     </div>
   );
 }

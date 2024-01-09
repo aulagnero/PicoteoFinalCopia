@@ -50,10 +50,22 @@ export const carroSlice = createSlice({
                     state.productos.splice(posicion,1);
                 }
             }
+        },
+        eliminarDelCarro: (state, action) => {
+            const id = action.payload;
+            const posicion = state.productos.findIndex((producto:Producto) => producto.id === id);
+          
+            if(posicion > -1){
+                const obj = state.productos[posicion];
+                state.precioTotal = Number(state.precioTotal) - (Number(obj.precio) * (obj.cantidad || 0));
+          
+                // Eliminamos el producto del carrito sin importar la cantidad
+                state.productos.splice(posicion,1);
+            }
         }
     }
 
 });
 
-export const { agregarProducto, eliminarProducto } = carroSlice.actions;
+export const { agregarProducto, eliminarProducto, eliminarDelCarro } = carroSlice.actions;
 export default carroSlice;

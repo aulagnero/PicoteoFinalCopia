@@ -7,6 +7,7 @@ interface Product {
     descripcion: string;
     precio: number;
     valoracion: number;
+    cantidad: number;
     imagen: string[];
 }
 
@@ -51,7 +52,7 @@ const CardMantenedor: React.FC<CardMantenedorProps> = ({ product, editingProduct
                         value={editingProductId === product.id ? editedProduct?.descripcion : product.descripcion} readOnly={editingProductId !== product.id} onChange={(e) => handleChange(e, 'descripcion')} />
                 </div>
                 <div className="row campo-form">
-                    <div className='col-6'>
+                    <div className='col-4'>
                         <label
                             htmlFor="precio"
                             className="form-label label-inputs">
@@ -63,7 +64,7 @@ const CardMantenedor: React.FC<CardMantenedorProps> = ({ product, editingProduct
                             value={editingProductId === product.id ? editedProduct?.precio : product.precio} readOnly={editingProductId !== product.id} onChange={(e) => handleChange(e, 'precio')} />
                     </div>
 
-                    <div className='col-6'>
+                    <div className='col-4'>
                         <label
                             htmlFor="valoracion"
                             className="form-label label-inputs">
@@ -74,6 +75,20 @@ const CardMantenedor: React.FC<CardMantenedorProps> = ({ product, editingProduct
                             type="number"
                             value={editingProductId === product.id ? editedProduct?.valoracion : product.valoracion} readOnly={editingProductId !== product.id} onChange={(e) => handleChange(e, 'valoracion')} />
                     </div>
+
+                    <div className='col-4'>
+                        <label
+                            htmlFor="cantidad"
+                            className="form-label label-inputs">
+                            Cantidad
+                        </label>
+                        <input
+                            className='campo-input'
+                            type="number"
+                            value={editingProductId === product.id ? editedProduct?.cantidad : product.cantidad} readOnly={editingProductId !== product.id} onChange={(e) => handleChange(e, 'cantidad')} />
+                    </div> 
+
+
                 </div>
             </div>
 

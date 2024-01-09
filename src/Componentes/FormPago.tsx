@@ -37,7 +37,7 @@ function FormPago() {
             <div className="row campo-form">
 
                 <div className="col-12">
-                    <h2 className="textoo">2. Pago</h2>
+                    <h2 className="textoo">Pago</h2>
                 </div>
 
                 <div

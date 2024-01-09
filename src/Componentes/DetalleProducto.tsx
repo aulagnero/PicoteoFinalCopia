@@ -10,6 +10,7 @@ const productoInicial: IProducto = {
   valoracion: 0,
   categoria: "",
   descripcion: "",
+  cantidad: 0,
   imagen: [],
 };
 
@@ -190,11 +191,11 @@ function DetalleProducto() {
         </div> */}
       </div>
       <div className="container product-detail">
-            <div className="row">
+            <div className="row " style={{width: '1200px' , marginBottom: '24px'}}>
                 <div className="col-6 product-info">
                     <span className='detalles-titulo'>{producto.nombre}</span>
                     <p className='detalles-precio'>${producto.precio}</p>
-                    <p className='detalles-descripcion'>{producto.categoria}</p>
+                    <div className= "col-12 stock-disponible">Cantidad disponible: {producto.cantidad}</div>
                 </div>
                 <div className="col-6 product-actions">
                     <div className="btn-group">
