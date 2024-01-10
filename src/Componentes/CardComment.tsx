@@ -35,7 +35,7 @@ function Card4({ comentario }: { comentario: Comentario }) {
 
   return (
 
-    <div className="card card-opiniones">
+    <div className=" card-opiniones">
 
       
 

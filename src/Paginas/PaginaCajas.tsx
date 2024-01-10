@@ -16,7 +16,7 @@ function PaginaCajas() {
   useEffect(() => {
     const obtenerProducto = async () => {
       try {
-        const respuesta = await fetch('http://localhost:3000/products/12');
+        const respuesta = await fetch('http://localhost:3000/products/27');
         const data = await respuesta.json();
         setProducto(data);
       } catch (error) {
