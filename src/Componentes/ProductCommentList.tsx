@@ -8,7 +8,15 @@ function ProductCommentList() {
     useEffect(() => {
       fetch('http://localhost:3000/comentarios')
         .then(response => response.json())
-        .then(data => setComentarios(data));
+        .then(data => {
+            // Desordena el array de comentarios
+            for (let i = data.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [data[i], data[j]] = [data[j], data[i]];
+            }
+            // Selecciona los primeros 4 comentarios
+            setComentarios(data.slice(0, 4));
+        });
     }, []);
 
 

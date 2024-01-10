@@ -5,6 +5,7 @@
     min-width: 280px;
 
     display: flex;
+    flex-direction: row;
 
     align-items: center;
     width: 384px;

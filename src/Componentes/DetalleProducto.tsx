@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IProducto } from "../models/IProducto";
 import "./ProductoIndividual.css"
+import { useDispatch } from 'react-redux';
+import { agregarProducto } from '../redux2/carroSlice';
 
 const productoInicial: IProducto = {
   id: 0,
@@ -70,6 +72,17 @@ function DetalleProducto() {
   const [selectedImage, setSelectedImage] = useState("");
   const [quantity, setQuantity] = useState(0);
 
+  const dispatch = useDispatch();
+
+
+
+  const addProducto = () => {
+    for (let i = 0; i < quantity; i++) {
+      dispatch(agregarProducto(producto));
+    }
+    setQuantity(0); // resetear la cantidad después de agregar al carro
+  };
+
   useEffect(() => {
     fetch(`http://localhost:3000/products/${id}`, {
       method: "GET",
@@ -92,10 +105,6 @@ function DetalleProducto() {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     }
-  };
-
-  const handleAddToCart = () => {
-    console.log(`Agregado al carro: ${quantity} ${producto?.nombre}(s)`);
   };
 
   return (
@@ -139,56 +148,7 @@ function DetalleProducto() {
             </div>
           </div>
         </div>
-        {/* <div className="container perfil-sabor">
-          <div className="row">
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Suave</span>
-              </div>
-            </div>
-            <div className="col-10 slider">
-              <input type="range" id="perfil-sabor" name="perfil-sabor" min="0" max="100" />
-            </div>
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Audaz</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Ligero</span>
-              </div>{" "}
-            </div>
-            <div className="col-10 slider">
-              <input type="range" id="perfil-sabor" name="perfil-sabor" min="0" max="100" />
-            </div>
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Ácido</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Sin gas</span>
-              </div>
-            </div>
-            <div className="col-10 slider">
-              <input type="range" id="perfil-sabor" name="perfil-sabor" min="0" max="100" />
-            </div>
-            <div className="col-1">
-              <div className="perfil-sabor-etiquetas">
-                <span>Gasificado</span>
-
-              </div>
-            </div>
-          </div>
-        </div> */}
+      
       </div>
       <div className="container product-detail">
             <div className="row " style={{width: '1200px' , marginBottom: '24px'}}>
@@ -216,7 +176,7 @@ function DetalleProducto() {
                 </div>
             </div>
             <div className="row">
-                <button className='agregar-carro' onClick={handleAddToCart}>Agregar al carro</button>
+                <button className='agregar-carro'  onClick={addProducto} disabled={quantity <= 0}>Agregar al carro</button>
             </div>
         </div>
     </>

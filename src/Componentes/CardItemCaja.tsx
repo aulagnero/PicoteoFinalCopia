@@ -43,7 +43,7 @@ function Rating({ value }: { value: number }) {
 const Card2: React.FC<{ producto: Producto }> = ({ producto }) => {
   return (
     <>
-      <div className="card card-cajas">
+      <div className="card-cajas">
 
         <div >
           {/* Asegúrate de que producto.imagen[0] exista antes de intentar renderizarlo */}

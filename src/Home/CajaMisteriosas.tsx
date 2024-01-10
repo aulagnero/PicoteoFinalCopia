@@ -29,7 +29,7 @@ function CajaMisteriosa() {
 
 
             {productos.length > 0 ? (
-              productos.filter(prod => prod.id === 12).map((prod, index) => <Card3 key={index} producto={prod} />)
+              productos.filter(prod => prod.id === 27).map((prod, index) => <Card3 key={index} producto={prod} />)
 
             ) : (
               <p>Cargando...</p>
@@ -96,7 +96,7 @@ function CajaMisteriosa() {
             <Llamada endpoint={ENDPOINT} setData={setProductos} />
 
             {productos.length > 0 ? (
-              productos.filter(producto => [23, 25, 11].includes(producto.id)).map(producto => (
+              productos.filter(producto => [24, 25, 26].includes(producto.id)).map(producto => (
                 <Card key={producto.id} producto={producto} />))
             ) : (
               <p>Cargando...</p>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ProductoIndividual.css';
 
+
 export interface Producto {
   valoracion: number;
   id: number;
@@ -35,7 +36,10 @@ function Rating({ value }: { value: number }) {
 }
 
 function ProductoIndividual({ product }: { product: Producto }) {
+
   const [selectedImage, setSelectedImage] = useState(product.imagen[0]);
+
+  
 
   return (
     <div className="container contenedor-producto">
